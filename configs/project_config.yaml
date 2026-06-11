@@ -1,0 +1,115 @@
+# ==========================================================
+# ML Explainability Agent Configuration
+# ==========================================================
+
+project:
+  name: "ML Explainability Agent"
+  version: "0.1.0"
+  environment: "development"
+
+# ==========================================================
+# Data Configuration
+# ==========================================================
+
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  artifacts_path: "artifacts/"
+  models_path: "models/"
+
+# ==========================================================
+# Model Configuration
+# ==========================================================
+
+model:
+
+  type: "decision_tree"
+
+  target_column: "target"
+
+  training:
+
+    test_size: 0.2
+
+    random_state: 42
+
+    max_depth: 4
+
+    min_samples_split: 5
+
+    min_samples_leaf: 2
+
+# ==========================================================
+# Explainability Configuration
+# ==========================================================
+
+explainability:
+
+  enabled: true
+
+  methods:
+
+    - decision_path
+    - feature_importance
+
+  decision_path:
+
+    enabled: true
+
+  feature_importance:
+
+    enabled: true
+
+# ==========================================================
+# Visualization Configuration
+# ==========================================================
+
+visualization:
+
+  save_plots: true
+
+  output_directory: "artifacts/visualizations"
+
+  decision_tree:
+
+    enabled: true
+
+    max_depth: 4
+
+# ==========================================================
+# Logging Configuration
+# ==========================================================
+
+logging:
+
+  level: "INFO"
+
+  log_directory: "logs/"
+
+# ==========================================================
+# Agent Configuration
+# ==========================================================
+
+agent:
+
+  framework: "langgraph"
+
+  planner_agent:
+
+    enabled: true
+
+  explainer_agent:
+
+    enabled: true
+
+# ==========================================================
+# Output Configuration
+# ==========================================================
+
+output:
+
+  save_explanations: true
+
+  explanation_directory: "artifacts/explanations"
+
+  explanation_format: "markdown"

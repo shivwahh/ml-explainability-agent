@@ -1,0 +1,102 @@
+# ==========================================
+# Python / Packaging
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+.Python
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+MANIFEST
+
+# ==========================================
+# Virtual Environments / Python Tools
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+.pixi/
+.pdm-python
+.pdm-build/
+__pypackages__/
+.python-version
+
+# ==========================================
+# Test / Lint / Type / Coverage Caches
+# ==========================================
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ==========================================
+# IDE / OS / Notebook Noise
+# ==========================================
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+tempCodeRunnerFile.py
+
+# ==========================================
+# Logs / Runtime Files
+# ==========================================
+*.log
+*.pid
+logs/*
+!logs/.gitkeep
+
+# ==========================================
+# Environment Variables
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# ML Explainability Agent: Generated Outputs
+# ==========================================
+# Trained model binaries
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.onnx
+
+# Generated artifacts and visualizations
+artifacts/*
+!artifacts/.gitkeep
+
+# Data drops (keep placeholders if present)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Experiment tracking / vector stores / traces
+mlruns/
+.langsmith/
+traces/
+chroma/
+chromadb/
+.faiss/
+vectorstore/
+
+# Generated reports
+reports/
+outputs/
+output/

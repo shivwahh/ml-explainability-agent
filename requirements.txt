@@ -1,0 +1,25 @@
+# Core Data Science
+
+numpy
+pandas
+
+# Visualization
+
+matplotlib
+graphviz
+
+# Machine Learning
+
+scikit-learn
+
+# Notebook Development
+
+jupyter
+
+# Utilities
+
+python-dotenv
+
+# Testing
+
+pytest
