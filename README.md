@@ -390,11 +390,37 @@ No modification to core agent logic.
 ```text
 ml-explainability-agent/
 
+├── agents/
+│   ├── planner_agent/
+│   ├── explainer_agent/
+│   ├── report_agent/
+│   ├── visualization_agent/
+│   ├── explainability_graph.py
+│   ├── nodes.py
+│   ├── state.py
+│   └── __init__.py
+│
+├── artifacts/
+│   └── visualizations/
+│
 ├── configs/
+│
+├── data/
+│
+├── docs/
+│
+├── logs/
+│
+├── memory/
+│
+├── models/
+│
+├── notebooks/
 │
 ├── prompts/
 │
 ├── tools/
+│   ├── explainers/
 │   ├── model_loader/
 │   ├── prediction/
 │   ├── tree_reader/
@@ -402,27 +428,15 @@ ml-explainability-agent/
 │   ├── metrics/
 │   └── visualization/
 │
-├── agents/
-│   ├── planner_agent/
-│   ├── explainer_agent/
-│   ├── report_agent/
-│   └── visualization_agent/
-│
-├── memory/
-│
-├── models/
-│
-├── data/
-│
-├── artifacts/
-│
-├── notebooks/
-│
-├── logs/
+├── scripts/
 │
 ├── tests/
+│   ├── agents/
+│   └── tools/
 │
 ├── utils/
+│
+├── main.py
 │
 ├── README.md
 │

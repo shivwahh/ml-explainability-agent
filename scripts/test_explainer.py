@@ -1,5 +1,6 @@
 from sklearn.datasets import (
-    load_breast_cancer
+    load_breast_cancer,
+    fetch_covtype
 )
 
 from sklearn.tree import (
@@ -15,14 +16,14 @@ from tools.explainers.tree_prediction_explainer import (
 )
 
 # Load data
-data = load_breast_cancer()
+data = fetch_covtype()
 
 X = data.data
 y = data.target
 
 # Train model
 model = DecisionTreeClassifier(
-    max_depth=3,
+    max_depth=None,
     random_state=42
 )
 
