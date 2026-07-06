@@ -1,0 +1,391 @@
+{
+  "communities": {
+    "0": [
+      "path",
+      "tests_test_model_loader",
+      "tests_test_model_loader_test_save_and_load_model",
+      "tools_model_loader_model_loader",
+      "tools_model_loader_model_loader_modelloader",
+      "tools_model_loader_model_loader_modelloader_init",
+      "tools_model_loader_model_loader_modelloader_list_models",
+      "tools_model_loader_model_loader_modelloader_load_model",
+      "tools_model_loader_model_loader_modelloader_model_exists",
+      "tools_model_loader_model_loader_modelloader_save_model",
+      "tools_model_loader_model_loader_rationale_1",
+      "tools_model_loader_model_loader_rationale_13",
+      "tools_model_loader_model_loader_rationale_51",
+      "tools_model_loader_model_loader_rationale_81",
+      "tools_tree_reader_tree_visualizer_treevisualizer_save"
+    ],
+    "1": [
+      "scripts_test_decision_path",
+      "scripts_test_explainer",
+      "tests_test_decision_path_extractor",
+      "tests_test_decision_path_extractor_test_extract_path",
+      "tools_explainers_tree_prediction_explainer",
+      "tools_explainers_tree_prediction_explainer_rationale_1",
+      "tools_explainers_tree_prediction_explainer_rationale_15",
+      "tools_explainers_tree_prediction_explainer_treepredictionexplainer",
+      "tools_explainers_tree_prediction_explainer_treepredictionexplainer_explain",
+      "tools_tree_reader_decision_path_extractor",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor_extract_path",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor_init",
+      "tools_tree_reader_decision_path_extractor_rationale_1",
+      "tools_tree_reader_decision_path_extractor_rationale_26"
+    ],
+    "2": [
+      "tests_test_config_loader",
+      "tests_test_config_loader_test_load_config",
+      "utils_config_loader",
+      "utils_config_loader_configloader",
+      "utils_config_loader_configloader_as_dict",
+      "utils_config_loader_configloader_get",
+      "utils_config_loader_configloader_init",
+      "utils_config_loader_configloader_load_config",
+      "utils_config_loader_rationale_1",
+      "utils_config_loader_rationale_12",
+      "utils_config_loader_rationale_27",
+      "utils_config_loader_rationale_34",
+      "utils_config_loader_rationale_51"
+    ],
+    "3": [
+      "agents_decisionpathextractor",
+      "agents_explainabilityengine",
+      "agents_featureimportanceextractor",
+      "agents_modelloader",
+      "agents_planneragent",
+      "agents_reportgenerator",
+      "configs_projectconfig",
+      "tools_metricstool",
+      "tools_modelloadertool",
+      "tools_predictiontool",
+      "tools_shaptool",
+      "tools_visualizationtool"
+    ],
+    "4": [
+      "tests_test_decision_tree_reader",
+      "tests_test_decision_tree_reader_test_tree_summary",
+      "tools_tree_reader_decision_tree_reader",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_extract_rules",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_feature_name",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_leaf_nodes",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_tree_summary",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_init",
+      "tools_tree_reader_decision_tree_reader_rationale_1",
+      "tools_tree_reader_decision_tree_reader_rationale_18",
+      "tools_tree_reader_decision_tree_reader_rationale_43"
+    ],
+    "5": [
+      "agents_explainability_graph",
+      "agents_nodes",
+      "agents_nodes_decision_path_node",
+      "agents_nodes_explanation_node",
+      "agents_nodes_feature_importance_node",
+      "agents_nodes_planner_node",
+      "agents_nodes_prediction_node",
+      "agents_state",
+      "agents_state_explainabilitystate",
+      "typeddict"
+    ],
+    "6": [
+      "scripts_test_feature_importance",
+      "tools_tree_reader_feature_importance_extractor",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_feature_importance",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_top_features",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_init",
+      "tools_tree_reader_feature_importance_extractor_rationale_1",
+      "tools_tree_reader_feature_importance_extractor_rationale_25",
+      "tools_tree_reader_feature_importance_extractor_rationale_52"
+    ],
+    "7": [
+      "scripts_test_tree_structure_exporter",
+      "tools_tree_reader_tree_structure_exporter",
+      "tools_tree_reader_tree_structure_exporter_rationale_1",
+      "tools_tree_reader_tree_structure_exporter_rationale_29",
+      "tools_tree_reader_tree_structure_exporter_rationale_51",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_export_to_json",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_init",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_to_python"
+    ],
+    "8": [
+      "scripts_test_tree_visualizer",
+      "tools_tree_reader_tree_visualizer",
+      "tools_tree_reader_tree_visualizer_rationale_1",
+      "tools_tree_reader_tree_visualizer_rationale_29",
+      "tools_tree_reader_tree_visualizer_treevisualizer",
+      "tools_tree_reader_tree_visualizer_treevisualizer_display",
+      "tools_tree_reader_tree_visualizer_treevisualizer_init"
+    ],
+    "9": [
+      "tools_visualization_feature_importance_visualizer",
+      "tools_visualization_feature_importance_visualizer_featureimportancevisualizer",
+      "tools_visualization_feature_importance_visualizer_featureimportancevisualizer_plot",
+      "tools_visualization_feature_importance_visualizer_rationale_1"
+    ],
+    "10": [
+      "agents_decisiontreereader",
+      "tools_treereadertool"
+    ],
+    "11": [
+      "agents_explainer_agent_init",
+      "agents_explainer_agent_init_rationale_1"
+    ],
+    "12": [
+      "agents_planner_agent_init",
+      "agents_planner_agent_init_rationale_1"
+    ],
+    "13": [
+      "agents_report_agent_init",
+      "agents_report_agent_init_rationale_1"
+    ],
+    "14": [
+      "agents_visualization_agent_init",
+      "agents_visualization_agent_init_rationale_1"
+    ],
+    "15": [
+      "main",
+      "main_main"
+    ],
+    "16": [
+      "tools_metrics_init",
+      "tools_metrics_init_rationale_1"
+    ],
+    "17": [
+      "tools_prediction_init",
+      "tools_prediction_init_rationale_1"
+    ],
+    "18": [
+      "agents_configloader"
+    ],
+    "19": [
+      "agents_decisionpathexporter"
+    ],
+    "20": [
+      "agents_explainabilityreportgenerator"
+    ],
+    "21": [
+      "agents_featureimportanceexporter"
+    ],
+    "22": [
+      "agents_init"
+    ],
+    "23": [
+      "agents_langgraphexplainabilityagent"
+    ],
+    "24": [
+      "agents_modelmetadataextractor"
+    ],
+    "25": [
+      "agents_treestructureexporter"
+    ],
+    "26": [
+      "memory_init"
+    ],
+    "27": [
+      "models_init"
+    ],
+    "28": [
+      "pkg_ml_explainability_agent"
+    ],
+    "29": [
+      "prompts_init"
+    ],
+    "30": [
+      "scripts_init"
+    ],
+    "31": [
+      "test_open_ai"
+    ],
+    "32": [
+      "tests_agents_init"
+    ],
+    "33": [
+      "tests_init"
+    ],
+    "34": [
+      "tests_tools_init"
+    ],
+    "35": [
+      "tools_explainers_init"
+    ],
+    "36": [
+      "tools_init"
+    ],
+    "37": [
+      "tools_model_loader_init"
+    ],
+    "38": [
+      "tools_shap_init"
+    ],
+    "39": [
+      "tools_tree_reader_init"
+    ],
+    "40": [
+      "tools_visualization_init"
+    ],
+    "41": [
+      "utils_init"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1619047619047619,
+    "1": 0.18095238095238095,
+    "2": 0.19230769230769232,
+    "3": 0.18181818181818182,
+    "4": 0.19696969696969696,
+    "5": 0.3333333333333333,
+    "6": 0.2777777777777778,
+    "7": 0.25,
+    "8": 0.3333333333333333,
+    "9": 0.5,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0
+  },
+  "gods": [
+    {
+      "id": "tools_model_loader_model_loader_modelloader",
+      "label": "ModelLoader",
+      "degree": 9
+    },
+    {
+      "id": "tools_tree_reader_decision_path_extractor_decisionpathextractor",
+      "label": "DecisionPathExtractor",
+      "degree": 9
+    },
+    {
+      "id": "tools_tree_reader_decision_tree_reader_decisiontreereader",
+      "label": "DecisionTreeReader",
+      "degree": 8
+    },
+    {
+      "id": "utils_config_loader_configloader",
+      "label": "ConfigLoader",
+      "degree": 8
+    },
+    {
+      "id": "tools_tree_reader_feature_importance_extractor_featureimportanceextractor",
+      "label": "FeatureImportanceExtractor",
+      "degree": 7
+    },
+    {
+      "id": "tools_tree_reader_tree_structure_exporter_treestructureexporter",
+      "label": "TreeStructureExporter",
+      "degree": 5
+    },
+    {
+      "id": "tools_tree_reader_tree_visualizer_treevisualizer",
+      "label": "TreeVisualizer",
+      "degree": 5
+    },
+    {
+      "id": "agents_planneragent",
+      "label": "Planner Agent",
+      "degree": 4
+    },
+    {
+      "id": "agents_explainabilityengine",
+      "label": "Explainability Engine",
+      "degree": 4
+    },
+    {
+      "id": "agents_nodes_decision_path_node",
+      "label": "decision_path_node()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "decision_path_node()",
+      "target": "DecisionPathExtractor",
+      "source_files": [
+        "agents/nodes.py",
+        "tools/tree_reader/decision_path_extractor.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "feature_importance_node()",
+      "target": "FeatureImportanceExtractor",
+      "source_files": [
+        "agents/nodes.py",
+        "tools/tree_reader/feature_importance_extractor.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_load_config()",
+      "target": "ConfigLoader",
+      "source_files": [
+        "tests/test_config_loader.py",
+        "utils/config_loader.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_load_config()` unexpectedly reaches hub `ConfigLoader`"
+    },
+    {
+      "source": "test_extract_path()",
+      "target": "DecisionPathExtractor",
+      "source_files": [
+        "tests/test_decision_path_extractor.py",
+        "tools/tree_reader/decision_path_extractor.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_extract_path()` unexpectedly reaches hub `DecisionPathExtractor`"
+    },
+    {
+      "source": "test_tree_summary()",
+      "target": "DecisionTreeReader",
+      "source_files": [
+        "tests/test_decision_tree_reader.py",
+        "tools/tree_reader/decision_tree_reader.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_tree_summary()` unexpectedly reaches hub `DecisionTreeReader`"
+    }
+  ],
+  "tokens": {
+    "input": 4634,
+    "output": 1840
+  }
+}

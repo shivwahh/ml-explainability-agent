@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 
 dependencies = [
+    "graphifyy>=0.9.7",
     "graphviz>=0.21",
     "jupyter>=1.1.1",
     "langchain>=1.3.7",
