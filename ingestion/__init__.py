@@ -17,10 +17,12 @@ from ingestion.model_loader import ModelArtifactLoader
 from ingestion.data_dictionary_loader import DataDictionaryLoader
 from ingestion.project_context_loader import ProjectContextLoader
 from ingestion.artifact_validator import ArtifactValidator
+from ingestion.project_knowledge import ProjectKnowledge
 
 __all__ = [
     "ModelArtifactLoader",
     "DataDictionaryLoader",
     "ProjectContextLoader",
     "ArtifactValidator",
+    "ProjectKnowledge",
 ]

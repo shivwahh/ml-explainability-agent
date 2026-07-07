@@ -1,14 +1,42 @@
-from openai import OpenAI
-
-from tools.tree_reader.decision_path_extractor import (
-    DecisionPathExtractor
+from tools.explainers.explainer_selector import (
+    select_decision_path_explainer,
+    select_feature_importance_explainer
 )
 
-from tools.tree_reader.feature_importance_extractor import (
-    FeatureImportanceExtractor
-)
+from agents.explanation_provider import build_provider
 
-client = OpenAI()
+from prompts.explanation_prompt import build_explanation_prompt
+
+from utils.config_loader import ConfigLoader
+
+
+def _feature_names(state):
+    """
+    Return feature names from the knowledge object.
+
+    Prefers the model's own feature names and falls back to the data
+    dictionary feature records.
+    """
+    knowledge = state.get("knowledge", {})
+    model_metadata = knowledge.get("model") or {}
+
+    names = model_metadata.get("feature_names")
+
+    if names:
+        return names
+
+    return [
+        record.get("name")
+        for record in knowledge.get("features", [])
+        if record.get("name")
+    ]
+
+
+def _model_metadata(state):
+    """
+    Return the normalized model metadata from the knowledge object.
+    """
+    return state.get("knowledge", {}).get("model") or {}
 
 
 def planner_node(state):
@@ -17,11 +45,10 @@ def planner_node(state):
 
     return state
 
-def prediction_node(
-    state,
-    model,
-    target_names
-):
+
+def prediction_node(state):
+
+    model = state["model"]
 
     prediction = model.predict(
         state["sample"].reshape(1, -1)
@@ -29,56 +56,38 @@ def prediction_node(
 
     return {
         **state,
-        "prediction": target_names[
-            prediction
-        ]
+        "prediction": str(prediction)
     }
-    
 
 
+def decision_path_node(state):
 
-def decision_path_node(
-    state,
-    model,
-    feature_names
-):
-
-    extractor = (
-        DecisionPathExtractor(
-            model,
-            feature_names
-        )
+    explainer = select_decision_path_explainer(
+        state["model"],
+        _feature_names(state),
+        _model_metadata(state)
     )
 
-    path = (
-        extractor.extract_path(
-            state["sample"]
-        )
+    path = explainer.extract_path(
+        state["sample"]
     )
 
     return {
         **state,
         "decision_path": path
     }
-    
 
 
+def feature_importance_node(state):
 
-def feature_importance_node(
-    state,
-    model,
-    feature_names
-):
-
-    extractor = (
-        FeatureImportanceExtractor(
-            model,
-            feature_names
-        )
+    explainer = select_feature_importance_explainer(
+        state["model"],
+        _feature_names(state),
+        _model_metadata(state)
     )
 
     importance = (
-        extractor
+        explainer
         .get_top_features(5)
         .to_dict(
             orient="records"
@@ -89,35 +98,16 @@ def feature_importance_node(
         **state,
         "feature_importance": importance
     }
-    
+
 def explanation_node(state):
 
-    prompt = f"""
-You are an Explainable AI expert.
+    prompt = build_explanation_prompt(state)
 
-Question:
-{state['question']}
-
-Prediction:
-{state['prediction']}
-
-Decision Path:
-{state['decision_path']}
-
-Top Features:
-{state['feature_importance']}
-
-Explain in business-friendly language.
-"""
-
-    response = client.responses.create(
-        model="gpt-4.1-mini",
-        input=prompt
+    provider = build_provider(
+        ConfigLoader(state["config_path"])
     )
 
     return {
         **state,
-        "explanation": (
-            response.output_text
-        )
+        "explanation": provider.generate(prompt)
     }

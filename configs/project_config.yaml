@@ -8,6 +8,66 @@ project:
   environment: "development"
 
 # ==========================================================
+# Ingestion Configuration
+# ==========================================================
+# Paths to the three user-provided artifacts. Any of these may be left
+# null; missing artifacts are handled gracefully by ProjectKnowledge and
+# surfaced through the validation report.
+
+ingestion:
+
+  model_path: "models/test_model.joblib"
+
+  data_dictionary_path: null
+
+  project_context_path: null
+
+# ==========================================================
+# Routing Configuration
+# ==========================================================
+# Maps a user question to a normalized intent via case-insensitive
+# keyword matching. Intents are checked in order; the first match wins.
+# Unmatched questions fall back to default_intent (the full pipeline).
+
+routing:
+
+  default_intent: "full_explanation"
+
+  intents:
+
+    decision_path:
+      - "decision path"
+      - "why did"
+      - "how did"
+      - "which rules"
+      - "path"
+
+    feature_importance:
+      - "feature importance"
+      - "most important"
+      - "which features"
+      - "influential"
+      - "drivers"
+
+    prediction:
+      - "what will"
+      - "predict"
+      - "prediction"
+      - "outcome"
+
+# ==========================================================
+# Explanation Configuration
+# ==========================================================
+# Selects the explanation text provider. Use "echo" for a no-network,
+# deterministic provider (dev/tests) or "openai" for LLM generation.
+
+explanation:
+
+  provider: "openai"
+
+  model: "gpt-4.1-mini"
+
+# ==========================================================
 # Data Configuration
 # ==========================================================
 

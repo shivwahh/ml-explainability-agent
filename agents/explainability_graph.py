@@ -7,6 +7,22 @@ from agents.state import (
     ExplainabilityState
 )
 
+from agents.ingestion_node import (
+    ingestion_node
+)
+
+from agents.router import (
+    router_node,
+    route_entry,
+    route_after_prediction,
+    route_after_decision_path,
+    route_after_feature_importance,
+    ENTRY_ROUTES,
+    PREDICTION_ROUTES,
+    DECISION_PATH_ROUTES,
+    FEATURE_IMPORTANCE_ROUTES
+)
+
 from agents.nodes import (
     planner_node,
     prediction_node,
@@ -20,8 +36,18 @@ builder = StateGraph(
 )
 
 builder.add_node(
+    "ingestion",
+    ingestion_node
+)
+
+builder.add_node(
     "planner",
     planner_node
+)
+
+builder.add_node(
+    "router",
+    router_node
 )
 
 builder.add_node(
@@ -45,27 +71,41 @@ builder.add_node(
 )
 
 builder.set_entry_point(
+    "ingestion"
+)
+
+builder.add_edge(
+    "ingestion",
     "planner"
 )
 
 builder.add_edge(
     "planner",
-    "prediction"
+    "router"
 )
 
-builder.add_edge(
+builder.add_conditional_edges(
+    "router",
+    route_entry,
+    ENTRY_ROUTES
+)
+
+builder.add_conditional_edges(
     "prediction",
-    "decision_path"
+    route_after_prediction,
+    PREDICTION_ROUTES
 )
 
-builder.add_edge(
+builder.add_conditional_edges(
     "decision_path",
-    "feature_importance"
+    route_after_decision_path,
+    DECISION_PATH_ROUTES
 )
 
-builder.add_edge(
+builder.add_conditional_edges(
     "feature_importance",
-    "explanation"
+    route_after_feature_importance,
+    FEATURE_IMPORTANCE_ROUTES
 )
 
 builder.add_edge(

@@ -2,8 +2,457 @@
   "project": "ml-explainability-agent",
   "journal_version": "1.0",
   "timezone": "+05:30",
-  "last_updated": "2026-07-06T17:30:00.0000000+05:30",
+  "last_updated": "2026-07-09T11:30:00.0000000+05:30",
   "entries": [
+    {
+      "timestamp": "2026-07-09T11:30:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 10 (XGBoost model adapter + feature-importance explainer) implemented, plus an end-to-end run tab in the Streamlit UI that produces a business justification via the selected explanation provider.",
+      "work_done_till_date": [
+        "Added ingestion/adapters/xgboost_adapter.py: XGBoostAdapter matches xgboost sklearn-API estimators and native Boosters purely by module path (no import-time xgboost dependency) and normalizes framework, task type, feature names and booster_details (n_estimators via num_boosted_rounds).",
+        "Registered XGBoostAdapter in ingestion/adapters/registry.py DEFAULT_ADAPTERS (after the sklearn tree adapter, before the generic fallback) and exported it from ingestion/adapters/__init__.py.",
+        "Made ModelAdapter._infer_task_type defensive so a native xgboost Booster (which breaks sklearn 1.6 is_classifier tag inspection) degrades gracefully instead of raising.",
+        "Added tools/explainers/xgboost_feature_importance.py: XGBoostFeatureImportanceExtractor exposes the same get_feature_importance/get_top_features interface using gain-based booster scores for both the sklearn API and native Boosters.",
+        "Extended tools/explainers/explainer_selector.py with is_xgboost() so select_feature_importance_explainer returns the XGBoost explainer for xgboost models and keeps the sklearn extractor for trees/forests.",
+        "Updated ui/app.py with an 'End-to-end run' tab: a provider selector (offline echo or openai) drives a full agent run via a temporary config override and renders the business justification, prediction, decision path and feature importance.",
+        "Added tests/ingestion/test_xgboost_adapter.py and tests/tools/test_xgboost_explainer.py (guarded with pytest.importorskip('xgboost')); installed xgboost in the venv and added it to requirements.txt. 75 tests pass across tools + agents + ingestion + prompts."
+      ],
+      "current_state": {
+        "strengths": [
+          "The platform now normalizes and explains XGBoost gradient-boosted models, selected automatically through the existing registry and explainer selector with no call-site changes.",
+          "XGBoost feature importance is gain-based and works for both the sklearn API and native Boosters via one shared interface.",
+          "The adapter recognizes xgboost by module path, so the registry imports and runs cleanly even when xgboost is not installed and the tests skip.",
+          "The UI now demonstrates the whole pipeline end to end and surfaces a plain-language business justification, switchable between offline echo and a live LLM."
+        ],
+        "gaps": [
+          "XGBoost decision-path (per-tree) explanation is not implemented; only feature importance is covered for boosted models.",
+          "CatBoost, LightGBM, forecasting and optimization models are still unsupported.",
+          "Only echo and OpenAI explanation providers exist.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 11: SHAP-based local explanations for tree and boosted models",
+        "description": "Add a model-agnostic local explanation capability using SHAP so a single prediction can be attributed to per-feature contributions for sklearn trees/forests and XGBoost, selected through the existing explainer selector and surfaced in the business-context prompt and UI.",
+        "deliverables": [
+          "A SHAP-based local explainer under tools/explainers/ that computes per-feature contributions for a sample and exposes a stable interface (e.g. explain_instance()).",
+          "Extend the explainer selector to resolve the SHAP explainer for supported tree/boosted models, degrading gracefully when shap is not installed.",
+          "Incorporate the local contributions into the explanation prompt so the business justification cites the top drivers for the specific record.",
+          "tests for the SHAP explainer and selector, guarded to skip when shap is not installed."
+        ],
+        "definition_of_done": [
+          "A fitted tree/forest/XGBoost model produces per-feature SHAP contributions for a single sample.",
+          "The selector returns the SHAP explainer for supported models and falls back cleanly when shap is absent.",
+          "The business justification references the record-specific top contributing features.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "ingestion/adapters/xgboost_adapter.py",
+        "ingestion/adapters/registry.py",
+        "tools/explainers/xgboost_feature_importance.py",
+        "tools/explainers/explainer_selector.py",
+        "ui/app.py",
+        "tests/ingestion/test_xgboost_adapter.py",
+        "tests/tools/test_xgboost_explainer.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-08T21:00:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 9 (end-to-end agent run + CLI entry point) implemented: a config-driven runner and main.py CLI execute the full compiled LangGraph agent on a question and sample, with passing end-to-end tests.",
+      "work_done_till_date": [
+        "Added agents/agent_runner.py: build_initial_state assembles the ExplainabilityState from config path + question + optional sample (converted to a float numpy array), and run_agent invokes the compiled graph and returns the final state.",
+        "Rewrote main.py into an argparse CLI (--config, --question, --sample) that runs the agent and prints the explanation, or the branch output for single-intent runs.",
+        "Added tests/agents/test_agent_runner.py (4 tests) covering state assembly and end-to-end runs through the full pipeline (echo provider) and the feature_importance branch. 68 tests pass across the whole tests tree.",
+        "Verified the CLI end to end on configs/demo_config.yaml for both a single-intent question and the full pipeline; the enriched business-context prompt renders with feature meanings and project context."
+      ],
+      "current_state": {
+        "strengths": [
+          "The platform is now usable as one command (main.py) in addition to the UI and notebook.",
+          "The runner builds the initial state entirely from config plus inputs, with no hardcoded paths.",
+          "End-to-end runs are testable without network access via the echo provider, exercising real graph routing.",
+          "The full pipeline demonstrates the whole stack: ingestion, adapter metadata, routing, tree explainers, business-context prompt and provider."
+        ],
+        "gaps": [
+          "Only the sklearn tree/forest adapter and tree explainers exist; XGBoost, CatBoost, forecasting and optimization models are still unsupported.",
+          "Only echo and OpenAI explanation providers exist.",
+          "The CLI takes a single sample inline; batch input and CSV/JSON sample loading are not supported.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 10: XGBoost model adapter + feature-importance explainer",
+        "description": "Extend the platform beyond scikit-learn by adding an XGBoost adapter that normalizes gradient-boosted models and an explainer path for their feature importance, selected automatically through the existing adapter registry and explainer selector.",
+        "deliverables": [
+          "An XGBoostAdapter under ingestion/adapters/ that matches xgboost sklearn-API models and native Boosters and normalizes metadata (framework, task type, n_estimators, feature names).",
+          "Register the adapter in the default registry ahead of the generic fallback.",
+          "Extend the explainer selector so XGBoost models resolve to a feature-importance explainer (gain/weight based).",
+          "tests for adapter matching/metadata and explainer selection, guarded to skip when xgboost is not installed."
+        ],
+        "definition_of_done": [
+          "A fitted XGBoost classifier resolves to the XGBoost adapter with normalized metadata.",
+          "The explainer selector returns a working feature-importance explainer for XGBoost.",
+          "Unsupported/absent xgboost degrades gracefully (generic adapter) and tests skip cleanly when the package is missing.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "agents/agent_runner.py",
+        "main.py",
+        "tests/agents/test_agent_runner.py",
+        "ingestion/adapters/registry.py",
+        "tools/explainers/explainer_selector.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-08T17:45:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 8 (business-context-aware explanation prompts) implemented: the explanation prompt now weaves in data dictionary feature meanings and project context from the knowledge object, with passing unit tests.",
+      "work_done_till_date": [
+        "Added prompts/explanation_prompt.py: build_explanation_prompt composes question, prediction, decision path and feature importance with a feature glossary (data dictionary meanings/units) and a Business Context block from the project context sections.",
+        "The builder gathers referenced features from both a single-tree decision path (path rules) and a forest path (feature_usage), plus feature importance, and renders meanings only for those features.",
+        "Missing knowledge sections are omitted gracefully: no feature glossary when the dictionary is absent, no Business Context block when context is empty.",
+        "Refactored agents/nodes.py so explanation_node builds the enriched prompt via prompts.explanation_prompt and passes it to the config-selected provider; removed the local prompt stub.",
+        "Added tests/prompts/ package with test_explanation_prompt.py (4 tests) covering feature-meaning inclusion, project-context inclusion, graceful omission, and forest feature_usage. 60 tests pass across tools + agents + ingestion + prompts."
+      ],
+      "current_state": {
+        "strengths": [
+          "Explanations are now grounded in the project's own semantic layer (feature meanings and business context), matching the enterprise 'translate to business language' goal.",
+          "The prompt builder is a pure function with no LLM/model calls, keeping the tools/prompts separation clean and fully unit-testable.",
+          "Handles single-tree and forest explanation shapes uniformly and degrades gracefully when the dictionary or context is missing.",
+          "The echo provider still returns the enriched prompt, so the full pipeline remains testable without a key."
+        ],
+        "gaps": [
+          "Only echo and OpenAI explanation providers exist; other backends (Gemini, Anthropic, local) are not implemented.",
+          "Only the sklearn tree/forest adapter exists; XGBoost, CatBoost, forecasting and optimization adapters/explainers are still missing.",
+          "The prompt lists context sections verbatim without selecting the most relevant ones for the question.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 9: End-to-end agent run + CLI entry point",
+        "description": "Provide a single, config-driven entry point that runs the full compiled LangGraph agent end to end (ingestion -> routing -> explanation) on a given question and sample, so the platform is usable as one command in addition to the UI and notebook.",
+        "deliverables": [
+          "A runnable entry point (main.py and/or a scripts/run_agent.py) that loads config, invokes the compiled graph with a question and sample, and prints the explanation.",
+          "A thin agent-runner helper that assembles the initial ExplainabilityState from config + inputs.",
+          "Use the echo provider path so the run is testable without network access.",
+          "tests for the runner assembling state and executing a single-intent branch end to end on the demo model"
+        ],
+        "definition_of_done": [
+          "One command runs the whole graph on the demo config and prints an explanation.",
+          "The runner builds the initial state from config and CLI/inputs with no hardcoded paths.",
+          "An end-to-end test drives at least one intent branch through the compiled graph using the echo provider.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "prompts/explanation_prompt.py",
+        "agents/nodes.py",
+        "tests/prompts/test_explanation_prompt.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-08T14:15:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 7 (config-driven, testable explanation provider) implemented: explanation_node now generates text via a provider selected from configuration, unit-tested with a fake provider and with no LLM calls at import time.",
+      "work_done_till_date": [
+        "Added agents/explanation_provider.py: an ExplanationProvider interface, an EchoExplanationProvider (deterministic, no network), an OpenAIExplanationProvider (client imported/constructed lazily inside generate), and a build_provider(config) factory that reads explanation.provider and explanation.model.",
+        "Refactored agents/nodes.py: explanation_node renders the prompt via _build_explanation_prompt and delegates generation to the config-selected provider; removed the module-level openai import so no LLM work happens at import time.",
+        "Added an explanation section to configs/project_config.yaml (provider: openai) and to the demo config generator (provider: echo) so the demo/UI/notebook run without an API key.",
+        "Added tests/agents/test_explanation_provider.py (6 tests) covering the factory (echo/openai/unknown fallback, model from config) and explanation_node using the echo provider. 56 tests pass across tools + agents + ingestion; the graph still compiles."
+      ],
+      "current_state": {
+        "strengths": [
+          "explanation_node is now unit-tested end to end without network access via the echo provider.",
+          "The LLM model and provider are config-driven, matching the configuration-driven architecture rule.",
+          "No module performs LLM calls or client construction at import time, so all orchestration imports cleanly in tests.",
+          "Adding a new provider (e.g. Gemini/Anthropic) only requires a class plus a PROVIDERS entry."
+        ],
+        "gaps": [
+          "Only echo and OpenAI providers exist; other backends (Gemini, Anthropic, local) are not implemented.",
+          "Only the sklearn tree/forest adapter exists; XGBoost, CatBoost, forecasting and optimization adapters/explainers are still missing.",
+          "The explanation prompt does not yet incorporate the data dictionary meanings or project context from the knowledge object.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 8: Business-context-aware explanation prompts",
+        "description": "Enrich the explanation prompt with the semantic layer already in the knowledge object - data dictionary feature meanings/units and project context sections - so explanations translate technical outputs into business language grounded in the project's own documentation.",
+        "deliverables": [
+          "A prompt-builder helper (under prompts/ or agents/) that composes question, prediction, decision path and feature importance with feature meanings from the data dictionary and relevant project-context sections.",
+          "Refactor explanation_node to use the enriched prompt builder fed from the knowledge object.",
+          "Map technical feature names to business descriptions in the decision path / feature importance rendering.",
+          "tests for the prompt builder covering presence of feature meanings and context, and graceful behaviour when the dictionary/context are missing"
+        ],
+        "definition_of_done": [
+          "The rendered prompt includes data dictionary meanings for the features referenced in the explanation.",
+          "Relevant project-context sections are included when available and omitted gracefully when not.",
+          "explanation_node produces the enriched prompt via the provider with no behavioural regression for the echo provider.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "agents/explanation_provider.py",
+        "agents/nodes.py",
+        "configs/project_config.yaml",
+        "scripts/generate_demo_artifacts.py",
+        "tests/agents/test_explanation_provider.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-08T10:30:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 6 (forest explainability + adapter-aware tool selection) implemented: explanation tools now cover tree ensembles and are chosen from the normalized knowledge object, with passing unit tests.",
+      "work_done_till_date": [
+        "Added tools/tree_reader/forest_path_extractor.py: ForestPathExtractor walks every estimator's decision path for a sample and aggregates per-feature usage across the ensemble, exposing the same extract_path() entry point as DecisionPathExtractor.",
+        "Added tools/explainers/explainer_selector.py: is_ensemble() plus select_decision_path_explainer() and select_feature_importance_explainer() choose the tree vs forest explainer from the knowledge object's tree_details (falling back to attribute inspection).",
+        "Refactored agents/nodes.py so decision_path_node and feature_importance_node use the selectors with the model metadata from the knowledge object instead of assuming a single DecisionTree.",
+        "Added tests/tools/test_explainer_selector.py (6 tests) covering metadata- and attribute-based ensemble detection, tree vs forest selection, forest path aggregation, and feature-importance for both. 50 tests pass across tools + agents + ingestion; the graph still compiles.",
+        "Confirmed via the demo/test suites that single-tree and forest paths both produce explanations without call-site changes."
+      ],
+      "current_state": {
+        "strengths": [
+          "Feature importance and a path-style explanation now work for both single trees and random forests.",
+          "The explainer is selected from the normalized knowledge object, keeping the agent nodes free of hardcoded model assumptions.",
+          "ForestPathExtractor and DecisionPathExtractor share one extract_path() interface, so the selector is a clean drop-in.",
+          "Adding a new explainer only requires extending the selector, not editing the nodes."
+        ],
+        "gaps": [
+          "explanation_node still calls OpenAI directly, is hardcoded to a model name, and is not covered by tests.",
+          "Only the sklearn tree/forest adapter exists; XGBoost, CatBoost, forecasting and optimization adapters/explainers are still missing.",
+          "Forest path explanation returns per-estimator detail that could be large for big ensembles (no summarization cap yet).",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 7: Config-driven, testable explanation provider",
+        "description": "Decouple explanation_node from a hardcoded OpenAI client by introducing a small explanation-provider abstraction selected via configuration, so the LLM model is config-driven and the node can be unit-tested with a fake provider.",
+        "deliverables": [
+          "An explanation provider interface plus an OpenAI-backed implementation and a fake/echo provider for tests, under tools/ or agents/.",
+          "A factory that builds the provider from configuration (provider name + model), with no import-time API calls.",
+          "Refactor explanation_node to render a prompt from the knowledge object and delegate generation to the injected provider.",
+          "tests for the provider factory and explanation_node using the fake provider"
+        ],
+        "definition_of_done": [
+          "explanation_node produces text via a provider chosen from config, with the model name read from config.",
+          "The node and provider factory are unit-tested without network access using a fake provider.",
+          "No module performs LLM calls at import time.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "tools/tree_reader/forest_path_extractor.py",
+        "tools/explainers/explainer_selector.py",
+        "agents/nodes.py",
+        "tests/tools/test_explainer_selector.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-07T21:30:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 5 (intent-based router) implemented: a config-driven intent classifier and conditional routing dispatch a question to the relevant explanation branch, plus a Streamlit UI and a notebook to explore all work done to date.",
+      "work_done_till_date": [
+        "Added tools/routing/intent_classifier.py: a pure, config-driven IntentClassifier that maps a question to a normalized intent via case-insensitive keyword matching (no LLM), with a default fallback.",
+        "Added agents/router.py: router_node (classifies via ConfigLoader + IntentClassifier and records state['intent']) and routing functions/maps (route_entry and post-node routers) driving conditional edges.",
+        "Rewired agents/explainability_graph.py: ingestion -> planner -> router, with conditional edges so a single-intent question runs only its branch and an unknown/general intent runs the full prediction -> decision_path -> feature_importance -> explanation pipeline.",
+        "Added intent to ExplainabilityState and a routing section (default_intent + keyword map) to configs/project_config.yaml.",
+        "Added scripts/generate_demo_artifacts.py which trains a fitted Iris decision tree and writes a data dictionary, project context and configs/demo_config.yaml.",
+        "Added notebooks/05_explainability_playground.ipynb and ui/app.py (Streamlit) to interactively exercise ingestion, adapters, validation, intent routing, decision path and feature importance; added streamlit to requirements.txt and installed it in the venv.",
+        "Added tests/tools/test_intent_classifier.py (6 tests) and tests/agents/test_router.py (5 tests). 44 tests pass across tools + agents + ingestion; end-to-end playground flow verified on the demo artifacts."
+      ],
+      "current_state": {
+        "strengths": [
+          "Questions are now routed to the relevant branch instead of always running the full linear pipeline; routing is entirely config-driven.",
+          "Unknown or general questions fall back safely to the full explanation pipeline.",
+          "A fitted demo model plus UI and notebook make every component built so far explorable without writing code.",
+          "The intent classifier is a pure tool (no LLM), keeping the tools/agents separation intact."
+        ],
+        "gaps": [
+          "explanation_node still calls OpenAI directly and is not covered by tests.",
+          "Only the sklearn tree/forest adapter exists; XGBoost, CatBoost, forecasting and optimization adapters are still missing.",
+          "Decision-path and feature-importance tools are decision-tree specific; forests and other models are not yet explained.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 6: Random forest explainability tools + adapter-aware tool selection",
+        "description": "Extend the explanation tools beyond single decision trees to tree ensembles (random forests / extra-trees) and select the right explainer based on the adapter/tree_details already produced during ingestion, so the router branches work for forests as well as single trees.",
+        "deliverables": [
+          "A forest-aware decision path / feature importance capability (aggregate across estimators) under tools/.",
+          "An explainer-selection helper that picks the tree vs forest explainer from the knowledge object's adapter/tree_details.",
+          "Refactor the decision_path and feature_importance nodes to use the selector instead of assuming a single tree.",
+          "tests covering single-tree and forest explanation paths"
+        ],
+        "definition_of_done": [
+          "Feature importance and a path-style explanation work for both a single tree and a random forest.",
+          "The explainer is chosen from the normalized knowledge object, not hardcoded to DecisionTree.",
+          "The agent nodes produce explanations for a forest without code changes at the call site.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "tools/routing/intent_classifier.py",
+        "agents/router.py",
+        "agents/explainability_graph.py",
+        "configs/project_config.yaml",
+        "scripts/generate_demo_artifacts.py",
+        "notebooks/05_explainability_playground.ipynb",
+        "ui/app.py",
+        "tests/tools/test_intent_classifier.py",
+        "tests/agents/test_router.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-07T18:45:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 4 (wire ProjectKnowledge into the LangGraph pipeline) implemented: a config-driven ingestion node builds ProjectKnowledge as the graph entry state and downstream nodes consume the normalized knowledge object, with passing unit tests.",
+      "work_done_till_date": [
+        "Rewrote agents/state.py into a clean ExplainabilityState TypedDict carrying config_path, knowledge, model and the existing explanation keys (fixed the previously invalid bare 'sample' line).",
+        "Added agents/ingestion_node.py: a config-driven entry node that reads ingestion.* paths via ConfigLoader, builds ProjectKnowledge, and populates state with the knowledge object and the live model.",
+        "Enhanced ProjectKnowledge to retain the live loaded model (self.model) so the pipeline reuses it without re-loading the artifact.",
+        "Refactored agents/nodes.py so prediction, decision_path and feature_importance nodes take only state and read the model and feature names from the knowledge object (with a data-dictionary fallback); made the OpenAI client lazy so the module imports without an API key.",
+        "Wired the ingestion node as the graph entry point in agents/explainability_graph.py (ingestion -> planner -> prediction -> decision_path -> feature_importance -> explanation).",
+        "Added an ingestion section to configs/project_config.yaml (model_path, data_dictionary_path, project_context_path; nulls allowed).",
+        "Added tests/agents/test_ingestion_node.py (3 tests); verified the compiled graph exposes the ingestion entry node. 33 tests pass across agents + ingestion suites."
+      ],
+      "current_state": {
+        "strengths": [
+          "The agent graph now starts from a ProjectKnowledge-populated state built entirely from config-driven paths.",
+          "Downstream nodes consume the normalized knowledge object and no longer receive model/feature args via broken partial bindings; the graph compiles end to end.",
+          "Missing or invalid artifacts surface through the validation report without crashing ingestion.",
+          "OpenAI usage is lazy, so orchestration modules import cleanly in tests without a key."
+        ],
+        "gaps": [
+          "No intent-based router; every question runs the full linear pipeline regardless of what was asked.",
+          "Only the sklearn tree/forest adapter exists; XGBoost, CatBoost, forecasting and optimization adapters are still missing.",
+          "explanation_node still calls OpenAI directly and is not covered by tests.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 5: Intent-based router in agent orchestration",
+        "description": "Introduce an intent classifier and conditional routing so a user question is dispatched to the relevant explanation branch (prediction, decision path, feature importance, or full explanation) instead of always running the entire linear pipeline.",
+        "deliverables": [
+          "A tool that classifies a question into a normalized intent (config-driven intent set, no LLM in the tool).",
+          "A router node plus conditional edges in agents/explainability_graph.py that select the branch from the classified intent.",
+          "Update ExplainabilityState to carry the resolved intent.",
+          "tests for the intent classifier and the routing decisions"
+        ],
+        "definition_of_done": [
+          "A question resolves to a normalized intent and the graph routes to the matching branch.",
+          "An unknown or general intent falls back to the full explanation pipeline.",
+          "Routing is driven by configuration, not hardcoded question strings.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "agents/ingestion_node.py",
+        "agents/state.py",
+        "agents/nodes.py",
+        "agents/explainability_graph.py",
+        "configs/project_config.yaml",
+        "tests/agents/test_ingestion_node.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-07T15:30:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 3 (model framework adapter architecture) implemented: a plugin adapter layer with a base interface, registry, sklearn tree/forest adapter and generic fallback, wired into ModelArtifactLoader, with passing unit tests.",
+      "work_done_till_date": [
+        "Added ingestion/adapters/ package: base ModelAdapter interface, GenericModelAdapter fallback, SklearnTreeAdapter, and AdapterRegistry with a default_registry() factory.",
+        "Refactored the model metadata normalization helpers (task type, feature names, classes, feature count, hyperparameters) out of ModelArtifactLoader into the base ModelAdapter.",
+        "SklearnTreeAdapter matches single trees (tree_) and forest ensembles (RandomForest/ExtraTrees) and adds framework and tree_details (depth, n_leaves, node_count, or n_estimators).",
+        "AdapterRegistry.resolve() selects the first matching specialized adapter and falls back to GenericModelAdapter; register() gives user adapters priority.",
+        "Wired the registry into ModelArtifactLoader.extract_metadata(), which now delegates to the resolved adapter; loader accepts an optional registry.",
+        "Added tests/ingestion/test_model_adapters.py (8 tests) covering adapter resolution, tree/forest details, generic fallback, custom-adapter priority and loader integration.",
+        "Full ingestion suite green: 30 tests pass."
+      ],
+      "current_state": {
+        "strengths": [
+          "Model normalization is now pluggable per framework without touching the loader.",
+          "Unsupported models degrade gracefully via the generic adapter instead of raising.",
+          "Existing metadata contract preserved (added 'adapter' plus tree-specific fields), so downstream consumers keep working."
+        ],
+        "gaps": [
+          "Only the sklearn tree/forest adapter is implemented; XGBoost, CatBoost, forecasting and optimization adapters are not yet written.",
+          "No intent-based router in agent orchestration.",
+          "The ProjectKnowledge object is not yet consumed by the LangGraph agent pipeline.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated to ingestion)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 4: Wire ProjectKnowledge into the LangGraph agent pipeline",
+        "description": "Consume the unified ProjectKnowledge object (model metadata via adapters, feature records, context sections, validation report) as the entry state of the LangGraph explainability agent, replacing any ad-hoc model loading in the orchestration layer.",
+        "deliverables": [
+          "Update agents/state.py to carry the ProjectKnowledge object (or its normalized sections).",
+          "An ingestion node that builds ProjectKnowledge from configured artifact paths and populates agent state.",
+          "Refactor existing nodes to read model/feature/context data from the knowledge object instead of loading models directly.",
+          "tests for the ingestion node and the updated agent state"
+        ],
+        "definition_of_done": [
+          "The agent graph starts from a ProjectKnowledge-populated state built from config-driven paths.",
+          "Downstream nodes consume the normalized knowledge object rather than re-loading artifacts.",
+          "Missing or invalid artifacts surface through the validation report without crashing the graph.",
+          "All new tests pass and the existing ingestion suite stays green."
+        ]
+      },
+      "references": [
+        "ingestion/adapters/",
+        "ingestion/model_loader.py",
+        "tests/ingestion/test_model_adapters.py",
+        "agents/state.py",
+        "agents/nodes.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-07T11:00:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 2 (unified project knowledge object) implemented: ProjectKnowledge aggregator composes the three ingestion loaders and the validator behind a single entry point, with passing unit tests.",
+      "work_done_till_date": [
+        "Added ingestion/project_knowledge.py with the ProjectKnowledge aggregator that runs ModelArtifactLoader, DataDictionaryLoader and ProjectContextLoader from a single build() entry point.",
+        "build() returns one normalized knowledge object with keys model, features, context and validation (the ArtifactValidator report).",
+        "Loader paths are optional; missing artifacts are skipped gracefully (model=None, features=[], context={}) and surfaced through the validation report instead of raising.",
+        "Exposed ProjectKnowledge via ingestion/__init__.py public API.",
+        "Added tests/ingestion/test_project_knowledge.py (4 tests) covering full composition, no-artifact graceful path, model-only path and instance-attribute population.",
+        "Full ingestion suite green: 22 tests pass."
+      ],
+      "current_state": {
+        "strengths": [
+          "Downstream agents and tools now obtain all three normalized artifacts plus the validation report from one call.",
+          "Partial knowledge (any subset of artifacts) is supported without raising, enabling graceful agent handling.",
+          "Aggregator reuses the existing loaders and validator with no duplication of normalization logic."
+        ],
+        "gaps": [
+          "No plugin adapter architecture yet for multiple ML frameworks (XGBoost, CatBoost, forecasting, optimization).",
+          "No intent-based router in agent orchestration.",
+          "Knowledge object is not yet consumed by the LangGraph agent pipeline.",
+          "Pre-existing collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py (unrelated to ingestion)."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 3: Model framework adapter (plugin) architecture",
+        "description": "Introduce a plugin adapter layer so the platform can recognize and normalize models from multiple frameworks (sklearn trees/forests, XGBoost, CatBoost, forecasting, optimization) behind a single adapter interface, selected automatically from the loaded model.",
+        "deliverables": [
+          "ingestion/adapters/ package with a base ModelAdapter interface and a registry",
+          "A default sklearn tree/forest adapter refactored from the current metadata extraction",
+          "Adapter selection wired into ModelArtifactLoader / ProjectKnowledge",
+          "tests for adapter selection and per-adapter metadata extraction"
+        ],
+        "definition_of_done": [
+          "A base adapter interface plus a registry that resolves the correct adapter from a loaded model.",
+          "At least the sklearn tree/forest adapter implemented and selected automatically.",
+          "Unsupported models fall back to generic metadata extraction without raising.",
+          "All new adapter tests pass and the existing ingestion suite stays green."
+        ]
+      },
+      "references": [
+        "ingestion/project_knowledge.py",
+        "ingestion/__init__.py",
+        "tests/ingestion/test_project_knowledge.py",
+        "context.md"
+      ]
+    },
     {
       "timestamp": "2026-07-06T17:30:00.0000000+05:30",
       "type": "milestone_completed",

@@ -1,0 +1,801 @@
+{
+  "communities": {
+    "0": [
+      "ingestion_adapters_base",
+      "ingestion_adapters_base_modeladapter",
+      "ingestion_adapters_base_modeladapter_extract",
+      "ingestion_adapters_base_modeladapter_extract_classes",
+      "ingestion_adapters_base_modeladapter_extract_feature_names",
+      "ingestion_adapters_base_modeladapter_extract_hyperparameters",
+      "ingestion_adapters_base_modeladapter_extract_n_features",
+      "ingestion_adapters_base_modeladapter_infer_task_type",
+      "ingestion_adapters_base_modeladapter_matches",
+      "ingestion_adapters_base_rationale_1",
+      "ingestion_adapters_base_rationale_112",
+      "ingestion_adapters_base_rationale_126",
+      "ingestion_adapters_base_rationale_19",
+      "ingestion_adapters_base_rationale_31",
+      "ingestion_adapters_base_rationale_44",
+      "ingestion_adapters_base_rationale_68",
+      "ingestion_adapters_base_rationale_87",
+      "ingestion_adapters_base_rationale_98",
+      "ingestion_adapters_generic",
+      "ingestion_adapters_generic_genericmodeladapter",
+      "ingestion_adapters_generic_genericmodeladapter_matches",
+      "ingestion_adapters_generic_rationale_1",
+      "ingestion_adapters_generic_rationale_15",
+      "ingestion_adapters_generic_rationale_26",
+      "ingestion_adapters_init",
+      "ingestion_adapters_init_rationale_1",
+      "ingestion_adapters_registry",
+      "ingestion_adapters_registry_adapterregistry",
+      "ingestion_adapters_registry_adapterregistry_init",
+      "ingestion_adapters_registry_adapterregistry_register",
+      "ingestion_adapters_registry_adapterregistry_resolve",
+      "ingestion_adapters_registry_default_registry",
+      "ingestion_adapters_registry_rationale_1",
+      "ingestion_adapters_registry_rationale_19",
+      "ingestion_adapters_registry_rationale_30",
+      "ingestion_adapters_registry_rationale_41",
+      "ingestion_adapters_registry_rationale_50",
+      "ingestion_adapters_registry_rationale_68",
+      "ingestion_adapters_sklearn_tree",
+      "ingestion_adapters_sklearn_tree_rationale_1",
+      "ingestion_adapters_sklearn_tree_rationale_16",
+      "ingestion_adapters_sklearn_tree_rationale_35",
+      "ingestion_adapters_sklearn_tree_rationale_46",
+      "ingestion_adapters_sklearn_tree_rationale_56",
+      "ingestion_adapters_sklearn_tree_sklearntreeadapter",
+      "ingestion_adapters_sklearn_tree_sklearntreeadapter_extract",
+      "ingestion_adapters_sklearn_tree_sklearntreeadapter_matches",
+      "ingestion_adapters_sklearn_tree_sklearntreeadapter_tree_details",
+      "tests_ingestion_test_model_adapters",
+      "tests_ingestion_test_model_adapters_fit",
+      "tests_ingestion_test_model_adapters_test_custom_adapter_takes_priority",
+      "tests_ingestion_test_model_adapters_test_forest_adapter_reports_n_estimators",
+      "tests_ingestion_test_model_adapters_test_generic_adapter_produces_normalized_fields",
+      "tests_ingestion_test_model_adapters_test_loader_uses_tree_adapter",
+      "tests_ingestion_test_model_adapters_test_registry_falls_back_to_generic",
+      "tests_ingestion_test_model_adapters_test_registry_resolves_forest_adapter",
+      "tests_ingestion_test_model_adapters_test_registry_resolves_tree_adapter",
+      "tests_ingestion_test_model_adapters_test_tree_adapter_adds_tree_details"
+    ],
+    "1": [
+      "ingestion_init",
+      "ingestion_init_rationale_1",
+      "ingestion_model_loader",
+      "ingestion_model_loader_modelartifactloader",
+      "ingestion_model_loader_modelartifactloader_extract_metadata",
+      "ingestion_model_loader_modelartifactloader_get_estimator",
+      "ingestion_model_loader_modelartifactloader_init",
+      "ingestion_model_loader_modelartifactloader_load",
+      "ingestion_model_loader_rationale_1",
+      "ingestion_model_loader_rationale_20",
+      "ingestion_model_loader_rationale_32",
+      "ingestion_model_loader_rationale_62",
+      "ingestion_model_loader_rationale_79",
+      "ingestion_model_loader_rationale_94",
+      "ingestion_project_knowledge",
+      "ingestion_project_knowledge_projectknowledge",
+      "ingestion_project_knowledge_projectknowledge_build",
+      "ingestion_project_knowledge_projectknowledge_init",
+      "ingestion_project_knowledge_projectknowledge_load_context_sections",
+      "ingestion_project_knowledge_projectknowledge_load_feature_records",
+      "ingestion_project_knowledge_projectknowledge_load_model_metadata",
+      "ingestion_project_knowledge_rationale_1",
+      "ingestion_project_knowledge_rationale_105",
+      "ingestion_project_knowledge_rationale_23",
+      "ingestion_project_knowledge_rationale_38",
+      "ingestion_project_knowledge_rationale_58",
+      "ingestion_project_knowledge_rationale_79",
+      "ingestion_project_knowledge_rationale_92",
+      "tests_ingestion_test_model_artifact_loader",
+      "tests_ingestion_test_model_artifact_loader_make_model",
+      "tests_ingestion_test_model_artifact_loader_test_extract_metadata",
+      "tests_ingestion_test_model_artifact_loader_test_load_joblib_model",
+      "tests_ingestion_test_model_artifact_loader_test_load_pickle_model",
+      "tests_ingestion_test_model_artifact_loader_test_missing_file_raises",
+      "tests_ingestion_test_model_artifact_loader_test_unsupported_extension_raises",
+      "tests_ingestion_test_project_knowledge",
+      "tests_ingestion_test_project_knowledge_make_model",
+      "tests_ingestion_test_project_knowledge_test_build_composes_all_sections",
+      "tests_ingestion_test_project_knowledge_test_build_populates_instance_attributes",
+      "tests_ingestion_test_project_knowledge_test_build_with_no_artifacts_is_graceful",
+      "tests_ingestion_test_project_knowledge_test_build_with_only_model",
+      "tests_ingestion_test_project_knowledge_write_context",
+      "tests_ingestion_test_project_knowledge_write_dictionary",
+      "tests_ingestion_test_project_knowledge_write_model"
+    ],
+    "2": [
+      "scripts_test_decision_path",
+      "scripts_test_explainer",
+      "tests_test_decision_path_extractor",
+      "tests_test_decision_path_extractor_test_extract_path",
+      "tests_tools_test_explainer_selector",
+      "tests_tools_test_explainer_selector_forest",
+      "tests_tools_test_explainer_selector_iris",
+      "tests_tools_test_explainer_selector_test_feature_importance_selector_works_for_both",
+      "tests_tools_test_explainer_selector_test_forest_path_aggregates_across_estimators",
+      "tests_tools_test_explainer_selector_test_is_ensemble_falls_back_to_attribute",
+      "tests_tools_test_explainer_selector_test_is_ensemble_from_metadata",
+      "tests_tools_test_explainer_selector_test_selects_decision_path_for_single_tree",
+      "tests_tools_test_explainer_selector_test_selects_forest_path_for_ensemble",
+      "tests_tools_test_explainer_selector_tree",
+      "tools_explainers_explainer_selector",
+      "tools_explainers_explainer_selector_is_ensemble",
+      "tools_explainers_explainer_selector_rationale_1",
+      "tools_explainers_explainer_selector_rationale_24",
+      "tools_explainers_explainer_selector_rationale_39",
+      "tools_explainers_explainer_selector_rationale_56",
+      "tools_explainers_explainer_selector_select_decision_path_explainer",
+      "tools_explainers_explainer_selector_select_feature_importance_explainer",
+      "tools_explainers_tree_prediction_explainer",
+      "tools_explainers_tree_prediction_explainer_rationale_1",
+      "tools_explainers_tree_prediction_explainer_rationale_15",
+      "tools_explainers_tree_prediction_explainer_treepredictionexplainer",
+      "tools_explainers_tree_prediction_explainer_treepredictionexplainer_explain",
+      "tools_tree_reader_decision_path_extractor",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor_extract_path",
+      "tools_tree_reader_decision_path_extractor_decisionpathextractor_init",
+      "tools_tree_reader_decision_path_extractor_rationale_1",
+      "tools_tree_reader_decision_path_extractor_rationale_26",
+      "tools_tree_reader_forest_path_extractor",
+      "tools_tree_reader_forest_path_extractor_forestpathextractor",
+      "tools_tree_reader_forest_path_extractor_forestpathextractor_extract_path",
+      "tools_tree_reader_forest_path_extractor_forestpathextractor_init",
+      "tools_tree_reader_forest_path_extractor_rationale_1",
+      "tools_tree_reader_forest_path_extractor_rationale_18",
+      "tools_tree_reader_forest_path_extractor_rationale_27",
+      "tools_tree_reader_forest_path_extractor_rationale_36"
+    ],
+    "3": [
+      "ingestion_data_dictionary_loader_datadictionaryloader_init",
+      "ingestion_data_dictionary_loader_rationale_65",
+      "path",
+      "scripts_test_tree_structure_exporter",
+      "scripts_test_tree_visualizer",
+      "tests_test_model_loader",
+      "tests_test_model_loader_test_save_and_load_model",
+      "tools_model_loader_model_loader",
+      "tools_model_loader_model_loader_modelloader",
+      "tools_model_loader_model_loader_modelloader_init",
+      "tools_model_loader_model_loader_modelloader_list_models",
+      "tools_model_loader_model_loader_modelloader_load_model",
+      "tools_model_loader_model_loader_modelloader_model_exists",
+      "tools_model_loader_model_loader_modelloader_save_model",
+      "tools_model_loader_model_loader_rationale_1",
+      "tools_model_loader_model_loader_rationale_13",
+      "tools_model_loader_model_loader_rationale_51",
+      "tools_model_loader_model_loader_rationale_81",
+      "tools_tree_reader_tree_structure_exporter",
+      "tools_tree_reader_tree_structure_exporter_rationale_1",
+      "tools_tree_reader_tree_structure_exporter_rationale_29",
+      "tools_tree_reader_tree_structure_exporter_rationale_51",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_export_to_json",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_init",
+      "tools_tree_reader_tree_structure_exporter_treestructureexporter_to_python",
+      "tools_tree_reader_tree_visualizer",
+      "tools_tree_reader_tree_visualizer_rationale_1",
+      "tools_tree_reader_tree_visualizer_rationale_29",
+      "tools_tree_reader_tree_visualizer_treevisualizer",
+      "tools_tree_reader_tree_visualizer_treevisualizer_display",
+      "tools_tree_reader_tree_visualizer_treevisualizer_init",
+      "tools_tree_reader_tree_visualizer_treevisualizer_save"
+    ],
+    "4": [
+      "agents_explainability_graph",
+      "agents_nodes",
+      "agents_nodes_decision_path_node",
+      "agents_nodes_feature_importance_node",
+      "agents_nodes_feature_names",
+      "agents_nodes_model_metadata",
+      "agents_nodes_planner_node",
+      "agents_nodes_prediction_node",
+      "agents_nodes_rationale_14",
+      "agents_nodes_rationale_36",
+      "agents_router",
+      "agents_router_rationale_1",
+      "agents_router_rationale_26",
+      "agents_router_rationale_51",
+      "agents_router_rationale_70",
+      "agents_router_rationale_77",
+      "agents_router_rationale_84",
+      "agents_router_route_after_decision_path",
+      "agents_router_route_after_feature_importance",
+      "agents_router_route_after_prediction",
+      "agents_router_route_entry",
+      "agents_router_router_node",
+      "tests_agents_test_router",
+      "tests_agents_test_router_test_graph_compiles_with_router",
+      "tests_agents_test_router_test_post_node_routes_continue_only_for_full",
+      "tests_agents_test_router_test_route_entry_maps_intent_to_first_node",
+      "tests_agents_test_router_test_router_node_defaults_to_full",
+      "tests_agents_test_router_test_router_node_sets_intent",
+      "tests_agents_test_router_write_config"
+    ],
+    "5": [
+      "ingestion_artifact_validator",
+      "ingestion_artifact_validator_artifactvalidator",
+      "ingestion_artifact_validator_artifactvalidator_cross_validate",
+      "ingestion_artifact_validator_artifactvalidator_dictionary_feature_names",
+      "ingestion_artifact_validator_artifactvalidator_init",
+      "ingestion_artifact_validator_artifactvalidator_validate",
+      "ingestion_artifact_validator_artifactvalidator_validate_context",
+      "ingestion_artifact_validator_artifactvalidator_validate_dictionary",
+      "ingestion_artifact_validator_artifactvalidator_validate_model",
+      "ingestion_artifact_validator_rationale_1",
+      "ingestion_artifact_validator_rationale_105",
+      "ingestion_artifact_validator_rationale_13",
+      "ingestion_artifact_validator_rationale_137",
+      "ingestion_artifact_validator_rationale_27",
+      "ingestion_artifact_validator_rationale_41",
+      "ingestion_artifact_validator_rationale_55",
+      "ingestion_artifact_validator_rationale_78",
+      "ingestion_artifact_validator_rationale_98",
+      "tests_ingestion_test_artifact_validator",
+      "tests_ingestion_test_artifact_validator_context_sections",
+      "tests_ingestion_test_artifact_validator_feature_records",
+      "tests_ingestion_test_artifact_validator_model_metadata",
+      "tests_ingestion_test_artifact_validator_test_missing_context_warns",
+      "tests_ingestion_test_artifact_validator_test_missing_model_is_error",
+      "tests_ingestion_test_artifact_validator_test_undocumented_feature_warns",
+      "tests_ingestion_test_artifact_validator_test_valid_report_has_no_errors"
+    ],
+    "6": [
+      "agents_explanation_provider",
+      "agents_explanation_provider_build_provider",
+      "agents_explanation_provider_echoexplanationprovider",
+      "agents_explanation_provider_echoexplanationprovider_generate",
+      "agents_explanation_provider_echoexplanationprovider_init",
+      "agents_explanation_provider_explanationprovider",
+      "agents_explanation_provider_explanationprovider_generate",
+      "agents_explanation_provider_openaiexplanationprovider",
+      "agents_explanation_provider_openaiexplanationprovider_generate",
+      "agents_explanation_provider_openaiexplanationprovider_init",
+      "agents_explanation_provider_rationale_1",
+      "agents_explanation_provider_rationale_14",
+      "agents_explanation_provider_rationale_17",
+      "agents_explanation_provider_rationale_30",
+      "agents_explanation_provider_rationale_45",
+      "agents_explanation_provider_rationale_75",
+      "agents_nodes_explanation_node",
+      "tests_agents_test_explanation_provider",
+      "tests_agents_test_explanation_provider_test_build_provider_echo",
+      "tests_agents_test_explanation_provider_test_build_provider_openai_without_calling",
+      "tests_agents_test_explanation_provider_test_build_provider_reads_model_from_config",
+      "tests_agents_test_explanation_provider_test_build_provider_unknown_falls_back_to_echo",
+      "tests_agents_test_explanation_provider_test_echo_provider_includes_prompt",
+      "tests_agents_test_explanation_provider_test_explanation_node_uses_echo_provider",
+      "tests_agents_test_explanation_provider_write_config"
+    ],
+    "7": [
+      "tests_tools_test_intent_classifier",
+      "tests_tools_test_intent_classifier_classifier",
+      "tests_tools_test_intent_classifier_intents",
+      "tests_tools_test_intent_classifier_test_classifies_decision_path",
+      "tests_tools_test_intent_classifier_test_classifies_feature_importance",
+      "tests_tools_test_intent_classifier_test_classifies_prediction",
+      "tests_tools_test_intent_classifier_test_empty_question_falls_back_to_default",
+      "tests_tools_test_intent_classifier_test_first_matching_intent_wins",
+      "tests_tools_test_intent_classifier_test_unknown_question_falls_back_to_default",
+      "tools_routing_init",
+      "tools_routing_init_rationale_1",
+      "tools_routing_intent_classifier",
+      "tools_routing_intent_classifier_intentclassifier",
+      "tools_routing_intent_classifier_intentclassifier_classify",
+      "tools_routing_intent_classifier_intentclassifier_init",
+      "tools_routing_intent_classifier_rationale_1",
+      "tools_routing_intent_classifier_rationale_13",
+      "tools_routing_intent_classifier_rationale_22",
+      "tools_routing_intent_classifier_rationale_32",
+      "ui_app",
+      "ui_app_build_knowledge",
+      "ui_app_main",
+      "ui_app_rationale_1",
+      "ui_app_rationale_43"
+    ],
+    "8": [
+      "ingestion_project_context_loader",
+      "ingestion_project_context_loader_projectcontextloader",
+      "ingestion_project_context_loader_projectcontextloader_init",
+      "ingestion_project_context_loader_projectcontextloader_load",
+      "ingestion_project_context_loader_projectcontextloader_register_reader",
+      "ingestion_project_context_loader_projectcontextloader_supported_extensions",
+      "ingestion_project_context_loader_projectcontextloader_to_sections",
+      "ingestion_project_context_loader_rationale_1",
+      "ingestion_project_context_loader_rationale_15",
+      "ingestion_project_context_loader_rationale_22",
+      "ingestion_project_context_loader_rationale_31",
+      "ingestion_project_context_loader_rationale_53",
+      "ingestion_project_context_loader_rationale_65",
+      "ingestion_project_context_loader_rationale_71",
+      "ingestion_project_context_loader_rationale_96",
+      "ingestion_project_context_loader_read_text_file",
+      "tests_ingestion_test_project_context_loader",
+      "tests_ingestion_test_project_context_loader_test_load_markdown",
+      "tests_ingestion_test_project_context_loader_test_missing_file_raises",
+      "tests_ingestion_test_project_context_loader_test_register_reader_extends_support",
+      "tests_ingestion_test_project_context_loader_test_to_sections",
+      "tests_ingestion_test_project_context_loader_test_unregistered_extension_raises",
+      "tests_ingestion_test_project_context_loader_write_markdown"
+    ],
+    "9": [
+      "agents_agent_runner",
+      "agents_agent_runner_build_initial_state",
+      "agents_agent_runner_rationale_1",
+      "agents_agent_runner_rationale_16",
+      "agents_agent_runner_rationale_40",
+      "agents_agent_runner_run_agent",
+      "main",
+      "main_main",
+      "main_parse_sample",
+      "main_rationale_1",
+      "main_rationale_20",
+      "tests_agents_test_agent_runner",
+      "tests_agents_test_agent_runner_test_build_initial_state_converts_sample",
+      "tests_agents_test_agent_runner_test_build_initial_state_without_sample",
+      "tests_agents_test_agent_runner_test_run_agent_feature_importance_branch",
+      "tests_agents_test_agent_runner_test_run_agent_full_pipeline_produces_explanation",
+      "tests_agents_test_agent_runner_write_config",
+      "tests_agents_test_agent_runner_write_model"
+    ],
+    "10": [
+      "prompts_explanation_prompt",
+      "prompts_explanation_prompt_build_explanation_prompt",
+      "prompts_explanation_prompt_feature_meanings",
+      "prompts_explanation_prompt_rationale_1",
+      "prompts_explanation_prompt_rationale_104",
+      "prompts_explanation_prompt_rationale_126",
+      "prompts_explanation_prompt_rationale_17",
+      "prompts_explanation_prompt_rationale_50",
+      "prompts_explanation_prompt_rationale_87",
+      "prompts_explanation_prompt_referenced_features",
+      "prompts_explanation_prompt_render_context",
+      "prompts_explanation_prompt_render_feature_glossary",
+      "tests_prompts_test_explanation_prompt",
+      "tests_prompts_test_explanation_prompt_knowledge",
+      "tests_prompts_test_explanation_prompt_test_prompt_handles_forest_feature_usage",
+      "tests_prompts_test_explanation_prompt_test_prompt_includes_feature_meaning_for_referenced_feature",
+      "tests_prompts_test_explanation_prompt_test_prompt_includes_project_context",
+      "tests_prompts_test_explanation_prompt_test_prompt_omits_sections_when_knowledge_missing"
+    ],
+    "11": [
+      "dataframe",
+      "ingestion_data_dictionary_loader",
+      "ingestion_data_dictionary_loader_datadictionaryloader",
+      "ingestion_data_dictionary_loader_datadictionaryloader_canonical_key",
+      "ingestion_data_dictionary_loader_datadictionaryloader_load",
+      "ingestion_data_dictionary_loader_datadictionaryloader_to_records",
+      "ingestion_data_dictionary_loader_rationale_1",
+      "ingestion_data_dictionary_loader_rationale_121",
+      "ingestion_data_dictionary_loader_rationale_140",
+      "ingestion_data_dictionary_loader_rationale_17",
+      "ingestion_data_dictionary_loader_rationale_92",
+      "tests_ingestion_test_data_dictionary_loader",
+      "tests_ingestion_test_data_dictionary_loader_test_load_csv",
+      "tests_ingestion_test_data_dictionary_loader_test_missing_file_raises",
+      "tests_ingestion_test_data_dictionary_loader_test_to_records_normalizes_columns",
+      "tests_ingestion_test_data_dictionary_loader_test_unsupported_extension_raises",
+      "tests_ingestion_test_data_dictionary_loader_write_csv"
+    ],
+    "12": [
+      "configs_demo_config",
+      "configs_demo_config_explanation",
+      "configs_demo_config_ingestion",
+      "configs_demo_config_routing",
+      "configs_project_config",
+      "configs_project_config_agent",
+      "configs_project_config_data",
+      "configs_project_config_explainability",
+      "configs_project_config_explanation",
+      "configs_project_config_ingestion",
+      "configs_project_config_logging",
+      "configs_project_config_model",
+      "configs_project_config_output",
+      "configs_project_config_project",
+      "configs_project_config_routing",
+      "configs_project_config_visualization"
+    ],
+    "13": [
+      "agents_ingestion_node",
+      "agents_ingestion_node_ingestion_node",
+      "agents_ingestion_node_rationale_1",
+      "agents_ingestion_node_rationale_16",
+      "agents_state",
+      "agents_state_explainabilitystate",
+      "agents_state_rationale_5",
+      "tests_agents_test_ingestion_node",
+      "tests_agents_test_ingestion_node_make_model",
+      "tests_agents_test_ingestion_node_test_ingestion_node_handles_missing_artifacts",
+      "tests_agents_test_ingestion_node_test_ingestion_node_populates_knowledge_and_model",
+      "tests_agents_test_ingestion_node_test_ingestion_node_preserves_existing_state",
+      "tests_agents_test_ingestion_node_write_config",
+      "typeddict"
+    ],
+    "14": [
+      "tests_test_config_loader",
+      "tests_test_config_loader_test_load_config",
+      "utils_config_loader",
+      "utils_config_loader_configloader",
+      "utils_config_loader_configloader_as_dict",
+      "utils_config_loader_configloader_get",
+      "utils_config_loader_configloader_init",
+      "utils_config_loader_configloader_load_config",
+      "utils_config_loader_rationale_1",
+      "utils_config_loader_rationale_12",
+      "utils_config_loader_rationale_27",
+      "utils_config_loader_rationale_34",
+      "utils_config_loader_rationale_51"
+    ],
+    "15": [
+      "tests_test_decision_tree_reader",
+      "tests_test_decision_tree_reader_test_tree_summary",
+      "tools_tree_reader_decision_tree_reader",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_extract_rules",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_feature_name",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_leaf_nodes",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_get_tree_summary",
+      "tools_tree_reader_decision_tree_reader_decisiontreereader_init",
+      "tools_tree_reader_decision_tree_reader_rationale_1",
+      "tools_tree_reader_decision_tree_reader_rationale_18",
+      "tools_tree_reader_decision_tree_reader_rationale_43"
+    ],
+    "16": [
+      "requirements_txt_graphviz",
+      "requirements_txt_jupyter",
+      "requirements_txt_matplotlib",
+      "requirements_txt_numpy",
+      "requirements_txt_openpyxl",
+      "requirements_txt_pandas",
+      "requirements_txt_pytest",
+      "requirements_txt_python_dotenv",
+      "requirements_txt_requirements",
+      "requirements_txt_scikit_learn",
+      "requirements_txt_streamlit"
+    ],
+    "17": [
+      "scripts_generate_demo_artifacts",
+      "scripts_generate_demo_artifacts_main",
+      "scripts_generate_demo_artifacts_rationale_1",
+      "scripts_generate_demo_artifacts_rationale_32",
+      "scripts_generate_demo_artifacts_rationale_46",
+      "scripts_generate_demo_artifacts_rationale_63",
+      "scripts_generate_demo_artifacts_rationale_75",
+      "scripts_generate_demo_artifacts_train_model",
+      "scripts_generate_demo_artifacts_write_config",
+      "scripts_generate_demo_artifacts_write_context",
+      "scripts_generate_demo_artifacts_write_data_dictionary"
+    ],
+    "18": [
+      "context_data_dictionary",
+      "context_development_roadmap",
+      "context_enterprise_ml_explainability_agent",
+      "context_internal_agent_knowledge_graph",
+      "context_model_artifact",
+      "context_project_context",
+      "context_project_knowledge",
+      "context_repository_structure",
+      "github_copilot_instructions_graphify"
+    ],
+    "19": [
+      "scripts_test_feature_importance",
+      "tools_tree_reader_feature_importance_extractor",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_feature_importance",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_top_features",
+      "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_init",
+      "tools_tree_reader_feature_importance_extractor_rationale_1",
+      "tools_tree_reader_feature_importance_extractor_rationale_25",
+      "tools_tree_reader_feature_importance_extractor_rationale_52"
+    ],
+    "20": [
+      "agents_decisionpathextractor",
+      "agents_explainabilityengine",
+      "agents_featureimportanceextractor",
+      "agents_reportgenerator",
+      "tools_shaptool",
+      "tools_visualizationtool"
+    ],
+    "21": [
+      "agents_modelloader",
+      "agents_planneragent",
+      "tools_metricstool",
+      "tools_modelloadertool",
+      "tools_predictiontool"
+    ],
+    "22": [
+      "tools_visualization_feature_importance_visualizer",
+      "tools_visualization_feature_importance_visualizer_featureimportancevisualizer",
+      "tools_visualization_feature_importance_visualizer_featureimportancevisualizer_plot",
+      "tools_visualization_feature_importance_visualizer_rationale_1"
+    ],
+    "23": [
+      "agents_decisiontreereader",
+      "tools_treereadertool"
+    ],
+    "24": [
+      "agents_explainer_agent_init",
+      "agents_explainer_agent_init_rationale_1"
+    ],
+    "25": [
+      "agents_planner_agent_init",
+      "agents_planner_agent_init_rationale_1"
+    ],
+    "26": [
+      "agents_report_agent_init",
+      "agents_report_agent_init_rationale_1"
+    ],
+    "27": [
+      "agents_visualization_agent_init",
+      "agents_visualization_agent_init_rationale_1"
+    ],
+    "28": [
+      "tools_metrics_init",
+      "tools_metrics_init_rationale_1"
+    ],
+    "29": [
+      "tools_prediction_init",
+      "tools_prediction_init_rationale_1"
+    ],
+    "30": [
+      "agents_configloader"
+    ],
+    "31": [
+      "agents_decisionpathexporter"
+    ],
+    "32": [
+      "agents_explainabilityreportgenerator"
+    ],
+    "33": [
+      "agents_featureimportanceexporter"
+    ],
+    "34": [
+      "agents_init"
+    ],
+    "35": [
+      "agents_langgraphexplainabilityagent"
+    ],
+    "36": [
+      "agents_modelmetadataextractor"
+    ],
+    "37": [
+      "agents_treestructureexporter"
+    ],
+    "38": [
+      "data_demo_project_context_md_project_context"
+    ],
+    "39": [
+      "memory_init"
+    ],
+    "40": [
+      "models_init"
+    ],
+    "41": [
+      "pkg_ml_explainability_agent"
+    ],
+    "42": [
+      "prompts_init"
+    ],
+    "43": [
+      "readme_ml_explainability_agent"
+    ],
+    "44": [
+      "scripts_init"
+    ],
+    "45": [
+      "test_open_ai"
+    ],
+    "46": [
+      "tests_agents_init"
+    ],
+    "47": [
+      "tests_ingestion_init"
+    ],
+    "48": [
+      "tests_init"
+    ],
+    "49": [
+      "tests_prompts_init"
+    ],
+    "50": [
+      "tests_tools_init"
+    ],
+    "51": [
+      "tools_explainers_init"
+    ],
+    "52": [
+      "tools_init"
+    ],
+    "53": [
+      "tools_model_loader_init"
+    ],
+    "54": [
+      "tools_shap_init"
+    ],
+    "55": [
+      "tools_tree_reader_init"
+    ],
+    "56": [
+      "tools_visualization_init"
+    ],
+    "57": [
+      "utils_init"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06291591046581972,
+    "1": 0.07928118393234672,
+    "2": 0.08658536585365853,
+    "3": 0.07007575757575757,
+    "4": 0.1330049261083744,
+    "5": 0.13846153846153847,
+    "6": 0.15,
+    "7": 0.13043478260869565,
+    "8": 0.13043478260869565,
+    "9": 0.19607843137254902,
+    "10": 0.1895424836601307,
+    "11": 0.18382352941176472,
+    "12": 0.14166666666666666,
+    "13": 0.25274725274725274,
+    "14": 0.19230769230769232,
+    "15": 0.19696969696969696,
+    "16": 0.18181818181818182,
+    "17": 0.2545454545454545,
+    "18": 0.2777777777777778,
+    "19": 0.2777777777777778,
+    "20": 0.3333333333333333,
+    "21": 0.4,
+    "22": 0.5,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0
+  },
+  "gods": [
+    {
+      "id": "ingestion_model_loader_modelartifactloader",
+      "label": "ModelArtifactLoader",
+      "degree": 18
+    },
+    {
+      "id": "ingestion_project_knowledge_projectknowledge",
+      "label": "ProjectKnowledge",
+      "degree": 18
+    },
+    {
+      "id": "ingestion_artifact_validator_artifactvalidator",
+      "label": "ArtifactValidator",
+      "degree": 14
+    },
+    {
+      "id": "ingestion_adapters_base_modeladapter",
+      "label": "ModelAdapter",
+      "degree": 14
+    },
+    {
+      "id": "ingestion_adapters_sklearn_tree_sklearntreeadapter",
+      "label": "SklearnTreeAdapter",
+      "degree": 14
+    },
+    {
+      "id": "ingestion_project_context_loader_projectcontextloader",
+      "label": "ProjectContextLoader",
+      "degree": 13
+    },
+    {
+      "id": "tools_routing_intent_classifier_intentclassifier",
+      "label": "IntentClassifier",
+      "degree": 12
+    },
+    {
+      "id": "prompts_explanation_prompt_build_explanation_prompt",
+      "label": "build_explanation_prompt()",
+      "degree": 12
+    },
+    {
+      "id": "ingestion_data_dictionary_loader_datadictionaryloader",
+      "label": "DataDictionaryLoader",
+      "degree": 11
+    },
+    {
+      "id": "ingestion_adapters_generic_genericmodeladapter",
+      "label": "GenericModelAdapter",
+      "degree": 11
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_load_config()",
+      "target": "ConfigLoader",
+      "source_files": [
+        "tests/test_config_loader.py",
+        "utils/config_loader.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_load_config()` unexpectedly reaches hub `ConfigLoader`"
+    },
+    {
+      "source": "test_extract_path()",
+      "target": "DecisionPathExtractor",
+      "source_files": [
+        "tests/test_decision_path_extractor.py",
+        "tools/tree_reader/decision_path_extractor.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_extract_path()` unexpectedly reaches hub `DecisionPathExtractor`"
+    },
+    {
+      "source": "test_tree_summary()",
+      "target": "DecisionTreeReader",
+      "source_files": [
+        "tests/test_decision_tree_reader.py",
+        "tools/tree_reader/decision_tree_reader.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_tree_summary()` unexpectedly reaches hub `DecisionTreeReader`"
+    },
+    {
+      "source": "test_save_and_load_model()",
+      "target": "ModelLoader",
+      "source_files": [
+        "tests/test_model_loader.py",
+        "tools/model_loader/model_loader.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `test_save_and_load_model()` unexpectedly reaches hub `ModelLoader`"
+    },
+    {
+      "source": "Model Loader Tool",
+      "target": "ModelLoader",
+      "source_files": [
+        "docs/architecture.md",
+        "AGENTS.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

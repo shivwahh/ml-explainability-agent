@@ -1,0 +1,31 @@
+# Demo configuration for the explainability playground.
+
+ingestion:
+  model_path: "D:/Projects/Agentic_AI/ml-explainability-agent/models/demo_iris_tree.joblib"
+  data_dictionary_path: "D:/Projects/Agentic_AI/ml-explainability-agent/data/demo/data_dictionary.csv"
+  project_context_path: "D:/Projects/Agentic_AI/ml-explainability-agent/data/demo/project_context.md"
+
+routing:
+  default_intent: "full_explanation"
+  intents:
+    decision_path:
+      - "decision path"
+      - "why did"
+      - "how did"
+      - "which rules"
+      - "path"
+    feature_importance:
+      - "feature importance"
+      - "most important"
+      - "which features"
+      - "influential"
+      - "drivers"
+    prediction:
+      - "what will"
+      - "predict"
+      - "prediction"
+      - "outcome"
+
+explanation:
+  provider: "echo"
+  model: "gpt-4.1-mini"

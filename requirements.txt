@@ -12,10 +12,15 @@ graphviz
 # Machine Learning
 
 scikit-learn
+xgboost
 
 # Notebook Development
 
 jupyter
+
+# UI
+
+streamlit
 
 # Utilities
 

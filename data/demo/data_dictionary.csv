@@ -1,0 +1,5 @@
+Column,Meaning,Unit,Allowed Range
+sepal length (cm),Length of the sepal,cm,0-10
+sepal width (cm),Width of the sepal,cm,0-10
+petal length (cm),Length of the petal,cm,0-10
+petal width (cm),Width of the petal,cm,0-10
