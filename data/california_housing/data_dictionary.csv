@@ -1,0 +1,9 @@
+Column,Meaning,Data Type,Unit,Allowed Range,Median
+MedInc,Median income in the block group,numeric,tens of thousands USD,0-15,3.5348
+HouseAge,Median house age in the block group,numeric,years,1-52,29.0
+AveRooms,Average number of rooms per household,numeric,rooms,1-140,5.2291
+AveBedrms,Average number of bedrooms per household,numeric,rooms,0-35,1.0488
+Population,Block group population,numeric,people,3-35000,1166.0
+AveOccup,Average number of household members,numeric,people,1-1250,2.8181
+Latitude,Block group latitude,numeric,degrees,32-42,34.26
+Longitude,Block group longitude,numeric,degrees,-125--114,-118.49

@@ -1,0 +1,31 @@
+Column,Meaning,Data Type,Unit,Allowed Range,Median
+mean radius,Mean radius of the cell-nucleus measurements,numeric,,6.981-28.110,13.37
+mean texture,Mean texture of the cell-nucleus measurements,numeric,,9.710-39.280,18.84
+mean perimeter,Mean perimeter of the cell-nucleus measurements,numeric,,43.790-188.500,86.24
+mean area,Mean area of the cell-nucleus measurements,numeric,,143.500-2501.000,551.1
+mean smoothness,Mean smoothness of the cell-nucleus measurements,numeric,,0.053-0.163,0.0959
+mean compactness,Mean compactness of the cell-nucleus measurements,numeric,,0.019-0.345,0.0926
+mean concavity,Mean concavity of the cell-nucleus measurements,numeric,,0.000-0.427,0.0615
+mean concave points,Mean concave points of the cell-nucleus measurements,numeric,,0.000-0.201,0.0335
+mean symmetry,Mean symmetry of the cell-nucleus measurements,numeric,,0.106-0.304,0.1792
+mean fractal dimension,Mean fractal dimension of the cell-nucleus measurements,numeric,,0.050-0.097,0.0615
+radius error,Radius error of the cell-nucleus measurements,numeric,,0.112-2.873,0.3242
+texture error,Texture error of the cell-nucleus measurements,numeric,,0.360-4.885,1.108
+perimeter error,Perimeter error of the cell-nucleus measurements,numeric,,0.757-21.980,2.287
+area error,Area error of the cell-nucleus measurements,numeric,,6.802-542.200,24.53
+smoothness error,Smoothness error of the cell-nucleus measurements,numeric,,0.002-0.031,0.0064
+compactness error,Compactness error of the cell-nucleus measurements,numeric,,0.002-0.135,0.0204
+concavity error,Concavity error of the cell-nucleus measurements,numeric,,0.000-0.396,0.0259
+concave points error,Concave points error of the cell-nucleus measurements,numeric,,0.000-0.053,0.0109
+symmetry error,Symmetry error of the cell-nucleus measurements,numeric,,0.008-0.079,0.0187
+fractal dimension error,Fractal dimension error of the cell-nucleus measurements,numeric,,0.001-0.030,0.0032
+worst radius,Worst radius of the cell-nucleus measurements,numeric,,7.930-36.040,14.97
+worst texture,Worst texture of the cell-nucleus measurements,numeric,,12.020-49.540,25.41
+worst perimeter,Worst perimeter of the cell-nucleus measurements,numeric,,50.410-251.200,97.66
+worst area,Worst area of the cell-nucleus measurements,numeric,,185.200-4254.000,686.5
+worst smoothness,Worst smoothness of the cell-nucleus measurements,numeric,,0.071-0.223,0.1313
+worst compactness,Worst compactness of the cell-nucleus measurements,numeric,,0.027-1.058,0.2119
+worst concavity,Worst concavity of the cell-nucleus measurements,numeric,,0.000-1.252,0.2267
+worst concave points,Worst concave points of the cell-nucleus measurements,numeric,,0.000-0.291,0.0999
+worst symmetry,Worst symmetry of the cell-nucleus measurements,numeric,,0.157-0.664,0.2822
+worst fractal dimension,Worst fractal dimension of the cell-nucleus measurements,numeric,,0.055-0.207,0.08

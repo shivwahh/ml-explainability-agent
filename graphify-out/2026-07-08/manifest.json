@@ -380,9 +380,9 @@
     "semantic_hash": "4175e0ae86709bf9a509fbc3f3d30758"
   },
   "ui/app.py": {
-    "mtime": 1783489769.7456164,
-    "ast_hash": "4c9090fe50078dbcf0e1f9da03df874d",
-    "semantic_hash": "4c9090fe50078dbcf0e1f9da03df874d"
+    "mtime": 1783419820.0483081,
+    "ast_hash": "6f38a3e58e1c6699228618ad9968a13a",
+    "semantic_hash": "6f38a3e58e1c6699228618ad9968a13a"
   },
   ".github/copilot-instructions.md": {
     "mtime": 1783335366.3980932,
@@ -395,9 +395,9 @@
     "semantic_hash": "ba03ee036e65e0274a7755c34c0260bc"
   },
   "agents/explanation_provider.py": {
-    "mtime": 1783490879.0170689,
-    "ast_hash": "47a0da99fc6259172ff11659d24a178f",
-    "semantic_hash": "47a0da99fc6259172ff11659d24a178f"
+    "mtime": 1783420199.2865396,
+    "ast_hash": "9be78a8fcb45b63faaaa27feb26ed2ae",
+    "semantic_hash": "9be78a8fcb45b63faaaa27feb26ed2ae"
   },
   "tests/agents/test_explanation_provider.py": {
     "mtime": 1783417154.1116562,
@@ -425,9 +425,9 @@
     "semantic_hash": "74effc2865900d1987890740e707fb66"
   },
   "requirements.txt": {
-    "mtime": 1783419820.0483081,
-    "ast_hash": "b403459d0ead64abd04c87b7965b60d9",
-    "semantic_hash": "b403459d0ead64abd04c87b7965b60d9"
+    "mtime": 1783410523.0083082,
+    "ast_hash": "02220b575afb16018cd31c25520c3287",
+    "semantic_hash": "02220b575afb16018cd31c25520c3287"
   },
   "agents/agent_runner.py": {
     "mtime": 1783417743.049475,

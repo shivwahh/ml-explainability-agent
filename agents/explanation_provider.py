@@ -9,9 +9,37 @@ selected from configuration. No provider performs any network or client
 initialization at import time.
 """
 
+import os
+
+import certifi
 from dotenv import load_dotenv
 from openai import OpenAI
+
 load_dotenv()
+
+
+def _repair_ca_bundle_env() -> None:
+    """
+    Point stale CA-bundle environment variables at a valid bundle.
+
+    Tools such as httpx (used by the OpenAI client) read ``SSL_CERT_FILE``
+    and related variables to locate the trusted CA bundle. When one of
+    these points at a path that no longer exists, client construction
+    fails with an opaque ``FileNotFoundError: [Errno 2] ...``. Any file
+    variable that references a missing path is redirected to certifi's
+    bundle; missing directory variables are removed.
+    """
+    for name in ("SSL_CERT_FILE", "REQUESTS_CA_BUNDLE", "CURL_CA_BUNDLE"):
+        path = os.environ.get(name)
+        if path and not os.path.isfile(path):
+            os.environ[name] = certifi.where()
+
+    cert_dir = os.environ.get("SSL_CERT_DIR")
+    if cert_dir and not os.path.isdir(cert_dir):
+        del os.environ["SSL_CERT_DIR"]
+
+
+_repair_ca_bundle_env()
 
 
 class ExplanationProvider:
