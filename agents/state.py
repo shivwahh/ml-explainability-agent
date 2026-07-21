@@ -19,4 +19,7 @@ class ExplainabilityState(TypedDict, total=False):
     prediction: str
     decision_path: dict
     feature_importance: list
+    counterfactual: dict
+    counterfactual_target: Any
+    local_explanation: dict
     explanation: str

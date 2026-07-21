@@ -21,6 +21,9 @@ from tools.tree_reader.forest_path_extractor import (
 from tools.explainers.xgboost_feature_importance import (
     XGBoostFeatureImportanceExtractor
 )
+from tools.explainers.xgboost_path_extractor import (
+    XGBoostPathExtractor
+)
 
 
 def is_ensemble(model, model_metadata=None) -> bool:
@@ -62,9 +65,14 @@ def select_decision_path_explainer(model, feature_names, model_metadata=None):
     """
     Return the decision-path explainer matching the model.
 
-    A tree ensemble yields a :class:`ForestPathExtractor`; a single tree
-    yields a :class:`DecisionPathExtractor`. Both expose ``extract_path``.
+    An XGBoost model yields an :class:`XGBoostPathExtractor` (it has no
+    scikit-learn ``tree_``); a tree ensemble yields a
+    :class:`ForestPathExtractor`; a single tree yields a
+    :class:`DecisionPathExtractor`. All expose ``extract_path``.
     """
+    if is_xgboost(model, model_metadata):
+        return XGBoostPathExtractor(model, feature_names)
+
     if is_ensemble(model, model_metadata):
         return ForestPathExtractor(model, feature_names)
 
@@ -88,3 +96,20 @@ def select_feature_importance_explainer(
         return XGBoostFeatureImportanceExtractor(model, feature_names)
 
     return FeatureImportanceExtractor(model, feature_names)
+
+
+def select_local_explainer(model, feature_names, model_metadata=None):
+    """
+    Return the SHAP local explainer for supported tree/boosted models.
+
+    Degrades gracefully by returning None when shap is not installed.
+    """
+    try:
+        import shap  # noqa: F401
+    except ImportError:
+        return None
+
+    from tools.explainers.shap_local_explainer import ShapLocalExplainer
+
+    return ShapLocalExplainer(model, feature_names)
+

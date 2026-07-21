@@ -19,6 +19,8 @@ from utils.config_loader import ConfigLoader
 INTENT_PREDICTION = "prediction"
 INTENT_DECISION_PATH = "decision_path"
 INTENT_FEATURE_IMPORTANCE = "feature_importance"
+INTENT_COUNTERFACTUAL = "counterfactual"
+INTENT_LOCAL_EXPLANATION = "local_explanation"
 INTENT_FULL = "full_explanation"
 
 
@@ -63,6 +65,12 @@ def route_entry(state) -> str:
     if intent == INTENT_FEATURE_IMPORTANCE:
         return INTENT_FEATURE_IMPORTANCE
 
+    if intent == INTENT_COUNTERFACTUAL:
+        return INTENT_COUNTERFACTUAL
+
+    if intent == INTENT_LOCAL_EXPLANATION:
+        return INTENT_LOCAL_EXPLANATION
+
     return INTENT_PREDICTION
 
 
@@ -82,6 +90,13 @@ def route_after_decision_path(state) -> str:
 
 def route_after_feature_importance(state) -> str:
     """
+    Continue to the local explanation node only for the full pipeline.
+    """
+    return "continue" if state.get("intent") == INTENT_FULL else "end"
+
+
+def route_after_local_explanation(state) -> str:
+    """
     Continue to the explanation node only for the full pipeline.
     """
     return "continue" if state.get("intent") == INTENT_FULL else "end"
@@ -91,10 +106,14 @@ ENTRY_ROUTES = {
     INTENT_PREDICTION: INTENT_PREDICTION,
     INTENT_DECISION_PATH: INTENT_DECISION_PATH,
     INTENT_FEATURE_IMPORTANCE: INTENT_FEATURE_IMPORTANCE,
+    INTENT_COUNTERFACTUAL: INTENT_COUNTERFACTUAL,
+    INTENT_LOCAL_EXPLANATION: INTENT_LOCAL_EXPLANATION,
 }
 
 PREDICTION_ROUTES = {"continue": INTENT_DECISION_PATH, "end": END}
 
 DECISION_PATH_ROUTES = {"continue": INTENT_FEATURE_IMPORTANCE, "end": END}
 
-FEATURE_IMPORTANCE_ROUTES = {"continue": "explanation", "end": END}
+FEATURE_IMPORTANCE_ROUTES = {"continue": "local_explanation", "end": END}
+
+LOCAL_EXPLANATION_ROUTES = {"continue": "explanation", "end": END}

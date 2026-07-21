@@ -72,6 +72,16 @@ def _referenced_features(state: dict) -> list:
         if feature:
             names.append(feature)
 
+    recommendation = (state.get("counterfactual") or {}).get("recommendation")
+    if recommendation and recommendation.get("feature"):
+        names.append(recommendation["feature"])
+
+    local_exp = state.get("local_explanation") or {}
+    for contrib in local_exp.get("contributions", []) or []:
+        feature = contrib.get("feature")
+        if feature:
+            names.append(feature)
+
     # Preserve order while de-duplicating.
     seen = set()
     ordered = []
@@ -105,7 +115,6 @@ def _render_context(knowledge: dict) -> str:
     Render project-context sections when available.
     """
     context = knowledge.get("context") or {}
-
     if not context:
         return ""
 
@@ -120,6 +129,69 @@ def _render_context(knowledge: dict) -> str:
         return ""
 
     return "Business Context:\n" + "\n\n".join(lines)
+
+
+def _render_counterfactual(state: dict) -> str:
+    """
+    Render the counterfactual ("what-if") result when present.
+
+    Describes the single-feature change that flips the prediction to the
+    requested target, or states that no single-feature change achieves it.
+    """
+    counterfactual = state.get("counterfactual") or {}
+
+    if not counterfactual:
+        return ""
+
+    target = counterfactual.get("target")
+
+    if counterfactual.get("already_target"):
+        return (
+            f"Counterfactual:\nThe record already predicts the target "
+            f"class {target}; no change is needed."
+        )
+
+    recommendation = counterfactual.get("recommendation")
+
+    if not recommendation:
+        return (
+            f"Counterfactual:\nNo single-feature change was found that "
+            f"flips the prediction to {target}."
+        )
+
+    return (
+        "Counterfactual:\n"
+        f"To reach prediction {target}, change '{recommendation['feature']}' "
+        f"from {recommendation['original_value']} to "
+        f"{recommendation['new_value']} "
+        f"(delta {recommendation['delta']})."
+    )
+
+
+def _render_local_explanation(state: dict) -> str:
+    """
+    Render the local feature contributions (SHAP) when present.
+    """
+    local_exp = state.get("local_explanation")
+    if not local_exp:
+        return ""
+
+    lines = [
+        "Local Feature Contributions (SHAP):",
+        f"- Base Value (expected model output): {local_exp['base_value']:.4f}",
+        f"- Predicted Value (base value + contributions): {local_exp['prediction_value']:.4f}",
+        "Top contributing features for this prediction:"
+    ]
+
+    for contrib in local_exp.get("contributions", []):
+        val = contrib["shap_value"]
+        direction = "increased" if val > 0 else "decreased"
+        lines.append(
+            f"  * '{contrib['feature']}' (value: {contrib['feature_value']:.4f}) "
+            f"{direction} the prediction by {abs(val):.4f}"
+        )
+
+    return "\n".join(lines)
 
 
 def build_explanation_prompt(state: dict) -> str:
@@ -150,6 +222,14 @@ def build_explanation_prompt(state: dict) -> str:
 
     sections.append(f"Decision Path:\n{state.get('decision_path')}")
     sections.append(f"Top Features:\n{state.get('feature_importance')}")
+
+    local_exp_str = _render_local_explanation(state)
+    if local_exp_str:
+        sections.append(local_exp_str)
+
+    counterfactual = _render_counterfactual(state)
+    if counterfactual:
+        sections.append(counterfactual)
 
     context = _render_context(knowledge)
     if context:

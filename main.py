@@ -56,7 +56,7 @@ def main():
         print(result["explanation"])
         return
 
-    for key in ("prediction", "decision_path", "feature_importance"):
+    for key in ("prediction", "decision_path", "feature_importance", "local_explanation"):
         if key in result:
             print(f"{key}: {result[key]}")
 

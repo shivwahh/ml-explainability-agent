@@ -1,0 +1,9 @@
+{
+"meta":{"test_sets":[],"test_metrics":[],"learn_metrics":[{"best_value":"Min","name":"MultiClass"}],"launch_mode":"Train","parameters":"","iteration_count":5,"learn_sets":["learn"],"name":"experiment"},
+"iterations":[
+{"learn":[0.5968464548],"iteration":0,"passed_time":0.0003891133041,"remaining_time":0.001556453216},
+{"learn":[0.3745395619],"iteration":1,"passed_time":0.0006332884945,"remaining_time":0.0009499327418},
+{"learn":[0.2640231827],"iteration":2,"passed_time":0.0009196635137,"remaining_time":0.0006131090092},
+{"learn":[0.212838489],"iteration":3,"passed_time":0.001231973363,"remaining_time":0.0003079933407},
+{"learn":[0.1761237123],"iteration":4,"passed_time":0.001488267099,"remaining_time":0}
+]}

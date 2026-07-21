@@ -57,3 +57,17 @@ def test_first_matching_intent_wins():
     assert classifier.classify(
         "Show the path and predict the result"
     ) == "decision_path"
+
+
+def test_counterfactual_wins_over_prediction_when_ordered_first():
+    classifier = IntentClassifier(
+        intents={
+            "counterfactual": ["make prediction", "what if", "change"],
+            "prediction": ["prediction", "predict"],
+        },
+        default_intent="full_explanation",
+    )
+
+    assert classifier.classify(
+        "What is the one parameter to change to make prediction as 1?"
+    ) == "counterfactual"

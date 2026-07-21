@@ -2,8 +2,122 @@
   "project": "ml-explainability-agent",
   "journal_version": "1.0",
   "timezone": "+05:30",
-  "last_updated": "2026-07-09T11:30:00.0000000+05:30",
+  "last_updated": "2026-07-21T19:45:00.0000000+05:30",
   "entries": [
+    {
+      "timestamp": "2026-07-21T19:45:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 13 (CatBoost and LightGBM model adapters + Google Gemini explanation provider) implemented, offering full pipeline support for CatBoost/LightGBM models and configurable Google Gemini LLM text generation.",
+      "work_done_till_date": [
+        "Added ingestion/adapters/lightgbm_adapter.py: LightGBMAdapter matches estimators from lightgbm module, extracting standard metadata and ensemble iteration tree count details.",
+        "Added ingestion/adapters/catboost_adapter.py: CatBoostAdapter matches estimators from catboost module, extracting standard metadata and iteration counts.",
+        "Registered LightGBMAdapter and CatBoostAdapter in ingestion/adapters/registry.py (DEFAULT_ADAPTERS) and exported them in ingestion/adapters/__init__.py.",
+        "Added GeminiExplanationProvider to agents/explanation_provider.py using the modern google-genai SDK, and registered 'gemini' in the PROVIDERS map.",
+        "Added GEMINI_MODELS to ui/_shared.py and updated ui/app_pages/run.py to support selecting google gemini and its models dynamically in the UI.",
+        "Updated requirements.txt to include google-genai as a core dependency.",
+        "Added unit tests under tests/ingestion/ (test_lightgbm_adapter.py, test_catboost_adapter.py) and tests/agents/ (test_explanation_provider.py) to cover all new features; verified all 90 tests pass successfully."
+      ],
+      "current_state": {
+        "strengths": [
+          "The platform supports model-agnostic feature importance and local SHAP explanations for CatBoost and LightGBM in addition to sklearn and XGBoost.",
+          "Explanation providers are fully configurable to use Google Gemini (using the modern google-genai client) or OpenAI.",
+          "Refactored Streamlit UI and tests run cleanly across all frameworks."
+        ],
+        "gaps": [
+          "Explainability for linear and regression models is not yet supported.",
+          "Forecasting and optimization models are still unsupported."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 14: Explainability support for linear and regression models",
+        "description": "Extend the platform's adapters, explainers, and UI to support generalized linear models (e.g. Ridge, Lasso, Logistic Regression, Linear Regression) by introducing a weight-based coefficient explainer, registering linear model adapters, and updating routing, prompt building, and rendering logic.",
+        "deliverables": [
+          "A linear model adapter that recognizes scikit-learn generalized linear models.",
+          "A coefficient-based feature importance/contribution explainer under tools/explainers/.",
+          "Integration in agent state and prompt builder to cite normalized coefficients.",
+          "Dedicated unit tests and validation checks for linear explainers."
+        ],
+        "definition_of_done": [
+          "Fitted linear classification/regression models are successfully loaded and resolved to the linear adapter.",
+          "Feature importance uses absolute coefficients to explain decision contributions.",
+          "All unit tests pass and existing tree-based explainer functionality is preserved."
+        ]
+      },
+      "references": [
+        "ingestion/adapters/lightgbm_adapter.py",
+        "ingestion/adapters/catboost_adapter.py",
+        "ingestion/adapters/registry.py",
+        "ingestion/adapters/__init__.py",
+        "agents/explanation_provider.py",
+        "ui/_shared.py",
+        "ui/app_pages/run.py",
+        "requirements.txt",
+        "tests/ingestion/test_lightgbm_adapter.py",
+        "tests/ingestion/test_catboost_adapter.py",
+        "tests/agents/test_explanation_provider.py"
+      ]
+    },
+    {
+      "timestamp": "2026-07-21T19:25:00.0000000+05:30",
+      "type": "milestone_completed",
+      "summary": "Milestone 11 (SHAP-based local explanations) and Milestone 12 (Counterfactual explanations) implemented, extending local feature attribution and counterfactual search capabilities.",
+      "work_done_till_date": [
+        "Added tools/explainers/shap_local_explainer.py: ShapLocalExplainer computes local feature attributions for tree/boosted models (sklearn trees/forests and XGBoost estimators/boosters) using TreeExplainer from the shap package.",
+        "Added tools/explainers/counterfactual_explainer.py: CounterfactualExplainer searches for the smallest single-feature change that flips a prediction to a target class, scanning candidates drawn from model split thresholds.",
+        "Extended tools/explainers/explainer_selector.py with select_local_explainer() to resolve the ShapLocalExplainer.",
+        "Added local_explanation_node and counterfactual_node under agents/nodes.py to perform local SHAP attribution and counterfactual explanations respectively, updating the ExplainabilityState with counterfactual and local_explanation fields.",
+        "Integrated the new nodes into the LangGraph orchestrator under agents/explainability_graph.py and set up conditional routing in agents/router.py for local_explanation and counterfactual intents.",
+        "Updated prompts/explanation_prompt.py to weave local SHAP attributions and counterfactual suggestions into the generated business justification context.",
+        "Refactored ui/app.py into multiple Streamlit app pages (knowledge, routing, explain, run) under ui/app_pages/ for a cleaner, modular UI structure.",
+        "Exposed the local feature contributions (SHAP) and counterfactuals in both the single-sample explanation tab and the end-to-end run tab in the UI.",
+        "Added unit tests under tests/tools/ (test_shap_local_explainer.py, test_counterfactual_explainer.py) and tests/agents/ (test_local_explanation_node.py, test_counterfactual_node.py) to cover all new features; verified all 82 tests pass across the codebase."
+      ],
+      "current_state": {
+        "strengths": [
+          "The platform now supports local explainability attributions using SHAP for sklearn and XGBoost tree-based models.",
+          "Counterfactual searching is robust and uses the model's split thresholds to target exact decision boundaries.",
+          "The prompt builder merges technical SHAP contributions and counterfactual recommendations into a readable business context.",
+          "Streamlit UI is fully refactored into a modern, multi-page structure."
+        ],
+        "gaps": [
+          "XGBoost decision-path (per-tree) explanation is not implemented.",
+          "CatBoost, LightGBM, forecasting and optimization models are still unsupported.",
+          "Only echo and OpenAI explanation providers exist.",
+          "Collection errors remain in scripts/test_tree_structure_exporter.py and test_open_ai.py."
+        ]
+      },
+      "planned_next_step": {
+        "title": "Milestone 13: Support for CatBoost and LightGBM model adapters",
+        "description": "Expand the plugin framework adapters and registry to recognize and normalize CatBoost and LightGBM gradient-boosted models, enabling both feature importance and local SHAP attributions on these frameworks without user-side code changes.",
+        "deliverables": [
+          "CatBoost and LightGBM model adapters under ingestion/adapters/ that normalize framework, task type, feature names, and estimator details.",
+          "Register the new adapters in the default adapter registry.",
+          "Extend explainer selectors and tests to cover these models.",
+          "Unit tests for CatBoost and LightGBM adapters, guarded to skip if the packages are not installed."
+        ],
+        "definition_of_done": [
+          "A fitted CatBoost or LightGBM model resolves to its dedicated adapter with normalized metadata.",
+          "The explainer selector returns working feature-importance and SHAP local explainers for these models.",
+          "CatBoost/LightGBM missing packages degrade gracefully to the generic adapter fallback.",
+          "All new tests pass and the existing suites stay green."
+        ]
+      },
+      "references": [
+        "tools/explainers/shap_local_explainer.py",
+        "tools/explainers/counterfactual_explainer.py",
+        "tools/explainers/explainer_selector.py",
+        "agents/nodes.py",
+        "agents/explainability_graph.py",
+        "agents/router.py",
+        "prompts/explanation_prompt.py",
+        "ui/app.py",
+        "ui/app_pages/",
+        "tests/tools/test_shap_local_explainer.py",
+        "tests/tools/test_counterfactual_explainer.py",
+        "tests/agents/test_local_explanation_node.py",
+        "tests/agents/test_counterfactual_node.py"
+      ]
+    },
     {
       "timestamp": "2026-07-09T11:30:00.0000000+05:30",
       "type": "milestone_completed",

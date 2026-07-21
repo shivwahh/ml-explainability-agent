@@ -5,10 +5,14 @@ from sklearn.datasets import load_iris
 
 from tools.explainers.explainer_selector import (
     is_xgboost,
+    select_decision_path_explainer,
     select_feature_importance_explainer,
 )
 from tools.explainers.xgboost_feature_importance import (
     XGBoostFeatureImportanceExtractor,
+)
+from tools.explainers.xgboost_path_extractor import (
+    XGBoostPathExtractor,
 )
 from tools.tree_reader.feature_importance_extractor import (
     FeatureImportanceExtractor,
@@ -97,3 +101,44 @@ def test_xgboost_importance_native_booster():
 
     assert len(importance) == len(names)
     assert importance["importance"].sum() > 0
+
+
+def test_selector_returns_xgboost_path_explainer():
+    model, names = _fitted_classifier()
+
+    explainer = select_decision_path_explainer(
+        model, names, {"framework": "xgboost"}
+    )
+
+    assert isinstance(explainer, XGBoostPathExtractor)
+
+
+def test_xgboost_path_traces_without_tree_attribute():
+    model, names = _fitted_classifier()
+    sample = np.array([5.1, 3.5, 1.4, 0.2])
+
+    result = select_decision_path_explainer(
+        model, names, {"framework": "xgboost"}
+    ).extract_path(sample)
+
+    assert result["is_ensemble"] is True
+    assert result["n_estimators"] == len(result["estimator_paths"])
+    assert result["n_estimators"] > 0
+    assert all("tree_count" in entry for entry in result["feature_usage"])
+
+    conditions = [
+        rule["condition"]
+        for path in result["estimator_paths"]
+        for rule in path["path"]
+    ]
+    assert conditions
+
+
+def test_xgboost_path_native_booster():
+    booster, names = _fitted_native_booster()
+    sample = np.array([6.3, 3.3, 6.0, 2.5])
+
+    result = XGBoostPathExtractor(booster, names).extract_path(sample)
+
+    assert result["n_estimators"] > 0
+    assert {entry["feature"] for entry in result["feature_usage"]} <= set(names)

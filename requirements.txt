@@ -13,6 +13,8 @@ graphviz
 
 scikit-learn
 xgboost
+shap
+google-genai
 
 # Notebook Development
 

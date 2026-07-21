@@ -919,41 +919,8 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
     }
   ],
-  "questions": [
-    {
-      "type": "bridge_node",
-      "question": "Why does `ModelArtifactLoader` connect `ModelArtifactLoader` to `test_model_adapters.py`?",
-      "why": "High betweenness centrality (0.059) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `ModelAdapter` connect `ModelAdapter` to `XGBoostAdapter`, `test_model_adapters.py`, `sklearn_tree.py`?",
-      "why": "High betweenness centrality (0.055) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `_read_text_file()` connect `ProjectContextLoader` to `ModelLoader`?",
-      "why": "High betweenness centrality (0.052) - this node is a cross-community bridge."
-    },
-    {
-      "type": "verify_inferred",
-      "question": "Are the 3 inferred relationships involving `ModelAdapter` (e.g. with `GenericModelAdapter` and `SklearnTreeAdapter`) actually correct?",
-      "why": "`ModelAdapter` has 3 INFERRED edges - model-reasoned connections that need verification."
-    },
-    {
-      "type": "verify_inferred",
-      "question": "Are the 4 inferred relationships involving `XGBoostAdapter` (e.g. with `AdapterRegistry` and `ModelAdapter`) actually correct?",
-      "why": "`XGBoostAdapter` has 4 INFERRED edges - model-reasoned connections that need verification."
-    },
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `Explainer agent package.`, `Planner agent package.`, `Report agent package.` to the rest of the system?",
-      "why": "206 weakly-connected nodes found - possible documentation gaps or missing edges."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `test_explainer_selector.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.061367621274108705 - nodes in this community are weakly interconnected."
-    }
-  ]
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
 }

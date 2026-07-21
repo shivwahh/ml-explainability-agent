@@ -55,6 +55,7 @@ def test_route_entry_maps_intent_to_first_node():
     assert route_entry(
         {"intent": "feature_importance"}
     ) == "feature_importance"
+    assert route_entry({"intent": "counterfactual"}) == "counterfactual"
     assert route_entry({"intent": "prediction"}) == "prediction"
     assert route_entry({"intent": "full_explanation"}) == "prediction"
     assert route_entry({}) == "prediction"
@@ -83,5 +84,6 @@ def test_graph_compiles_with_router():
 
     assert "router" in nodes
     assert "ingestion" in nodes
+    assert "counterfactual" in nodes
     # END constant is exported and used by the routing maps
     assert END is not None

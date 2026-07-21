@@ -1,18 +1,20 @@
 from agents.explanation_provider import (
     EchoExplanationProvider,
     OpenAIExplanationProvider,
+    GeminiExplanationProvider,
     build_provider,
 )
 from agents.nodes import explanation_node
 from utils.config_loader import ConfigLoader
 
 
-def _write_config(tmp_path, provider="echo", model="gpt-4.1-mini"):
+def _write_config(tmp_path, provider="echo", model=None):
     config_path = tmp_path / "config.yaml"
+    model_line = f'  model: "{model}"\n' if model is not None else ""
     config_path.write_text(
         "explanation:\n"
         f'  provider: "{provider}"\n'
-        f'  model: "{model}"\n',
+        f"{model_line}",
         encoding="utf-8",
     )
     return config_path
@@ -75,3 +77,22 @@ def test_explanation_node_uses_echo_provider(tmp_path):
     assert isinstance(result["explanation"], str)
     assert "Why this class?" in result["explanation"]
     assert "petal length (cm)" in result["explanation"]
+
+
+def test_build_provider_gemini_without_calling(tmp_path):
+    config = ConfigLoader(str(_write_config(tmp_path, provider="gemini")))
+
+    provider = build_provider(config)
+
+    assert isinstance(provider, GeminiExplanationProvider)
+    assert provider.model == "gemini-3.6-flash"
+
+
+def test_build_provider_gemini_reads_model_from_config(tmp_path):
+    config = ConfigLoader(
+        str(_write_config(tmp_path, provider="gemini", model="gemini-1.5-pro"))
+    )
+
+    provider = build_provider(config)
+
+    assert provider.model == "gemini-1.5-pro"

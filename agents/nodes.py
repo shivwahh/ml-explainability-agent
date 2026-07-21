@@ -1,6 +1,11 @@
 from tools.explainers.explainer_selector import (
     select_decision_path_explainer,
-    select_feature_importance_explainer
+    select_feature_importance_explainer,
+    select_local_explainer
+)
+
+from tools.explainers.counterfactual_explainer import (
+    CounterfactualExplainer
 )
 
 from agents.explanation_provider import build_provider
@@ -98,6 +103,57 @@ def feature_importance_node(state):
         **state,
         "feature_importance": importance
     }
+
+
+def counterfactual_node(state):
+
+    explainer = CounterfactualExplainer(
+        state["model"],
+        _feature_names(state),
+    )
+
+    result = explainer.explain(
+        state["sample"],
+        target=state.get("counterfactual_target", 1),
+    )
+
+    return {
+        **state,
+        "counterfactual": result,
+        "prediction": str(result["baseline_prediction"]),
+    }
+
+
+def local_explanation_node(state):
+    """
+    Compute SHAP local explanations (feature contributions) for a sample.
+    """
+    explainer = select_local_explainer(
+        state["model"],
+        _feature_names(state),
+        _model_metadata(state)
+    )
+
+    if explainer is None:
+        return state
+
+    # Ensure prediction exists in state
+    prediction = state.get("prediction")
+    if prediction is None:
+        model = state["model"]
+        prediction = str(model.predict(state["sample"].reshape(1, -1))[0])
+
+    result = explainer.explain_instance(
+        state["sample"],
+        prediction=prediction
+    )
+
+    return {
+        **state,
+        "local_explanation": result,
+        "prediction": prediction
+    }
+
 
 def explanation_node(state):
 

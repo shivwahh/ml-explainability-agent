@@ -90,3 +90,22 @@ def test_feature_importance_selector_works_for_both():
     assert isinstance(forest_explainer, FeatureImportanceExtractor)
     assert len(tree_explainer.get_top_features(4)) == 4
     assert len(forest_explainer.get_top_features(4)) == 4
+
+
+def test_select_local_explainer_resolution():
+    from tools.explainers.explainer_selector import select_local_explainer
+    from tools.explainers.shap_local_explainer import ShapLocalExplainer
+
+    tree, names = _tree()
+    explainer = select_local_explainer(tree, names)
+    assert isinstance(explainer, ShapLocalExplainer)
+
+
+def test_select_local_explainer_fallback_when_shap_absent():
+    from unittest import mock
+    from tools.explainers.explainer_selector import select_local_explainer
+
+    tree, names = _tree()
+    with mock.patch.dict("sys.modules", {"shap": None}):
+        explainer = select_local_explainer(tree, names)
+        assert explainer is None

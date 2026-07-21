@@ -151,7 +151,7 @@
       "_origin": "ast",
       "community": 31,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Explainer Agent Package",
       "id": "agents_explainer_agent_init"
     },
     {
@@ -162,7 +162,7 @@
       "_origin": "ast",
       "community": 31,
       "norm_label": "explainer agent package.",
-      "community_name": "__init__.py",
+      "community_name": "Explainer Agent Package",
       "id": "agents_explainer_agent_init_rationale_1"
     },
     {
@@ -173,7 +173,7 @@
       "_origin": "ast",
       "community": 32,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Planner Agent Package",
       "id": "agents_planner_agent_init"
     },
     {
@@ -184,7 +184,7 @@
       "_origin": "ast",
       "community": 32,
       "norm_label": "planner agent package.",
-      "community_name": "__init__.py",
+      "community_name": "Planner Agent Package",
       "id": "agents_planner_agent_init_rationale_1"
     },
     {
@@ -195,7 +195,7 @@
       "_origin": "ast",
       "community": 33,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Report Agent Package",
       "id": "agents_report_agent_init"
     },
     {
@@ -206,7 +206,7 @@
       "_origin": "ast",
       "community": 33,
       "norm_label": "report agent package.",
-      "community_name": "__init__.py",
+      "community_name": "Report Agent Package",
       "id": "agents_report_agent_init_rationale_1"
     },
     {
@@ -228,7 +228,7 @@
       "_origin": "ast",
       "community": 34,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Visualization Agent Package",
       "id": "agents_visualization_agent_init"
     },
     {
@@ -239,7 +239,7 @@
       "_origin": "ast",
       "community": 34,
       "norm_label": "visualization agent package.",
-      "community_name": "__init__.py",
+      "community_name": "Visualization Agent Package",
       "id": "agents_visualization_agent_init_rationale_1"
     },
     {
@@ -308,7 +308,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "test_decision_path.py",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "scripts_test_decision_path"
     },
     {
@@ -319,7 +319,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "test_explainer.py",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "scripts_test_explainer"
     },
     {
@@ -330,7 +330,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_feature_importance.py",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "scripts_test_feature_importance"
     },
     {
@@ -396,7 +396,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "test_config_loader.py",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "tests_test_config_loader"
     },
     {
@@ -407,7 +407,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "test_load_config()",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "tests_test_config_loader_test_load_config"
     },
     {
@@ -418,7 +418,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "test_decision_path_extractor.py",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tests_test_decision_path_extractor"
     },
     {
@@ -429,7 +429,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "test_extract_path()",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tests_test_decision_path_extractor_test_extract_path"
     },
     {
@@ -484,7 +484,7 @@
       "_origin": "ast",
       "community": 68,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tests_tools_init"
     },
     {
@@ -495,7 +495,7 @@
       "_origin": "ast",
       "community": 70,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_init"
     },
     {
@@ -506,7 +506,7 @@
       "_origin": "ast",
       "community": 69,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_explainers_init"
     },
     {
@@ -517,7 +517,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "tree_prediction_explainer.py",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_explainers_tree_prediction_explainer"
     },
     {
@@ -528,7 +528,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "treepredictionexplainer",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_explainers_tree_prediction_explainer_treepredictionexplainer"
     },
     {
@@ -539,7 +539,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": ".explain()",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_explainers_tree_prediction_explainer_treepredictionexplainer_explain"
     },
     {
@@ -550,7 +550,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "tree_prediction_explainer.py  converts decision paths into human-readable exp",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_explainers_tree_prediction_explainer_rationale_1"
     },
     {
@@ -561,7 +561,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "generate explanation         from decision path.",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_explainers_tree_prediction_explainer_rationale_15"
     },
     {
@@ -594,7 +594,7 @@
       "_origin": "ast",
       "community": 71,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_model_loader_init"
     },
     {
@@ -759,7 +759,7 @@
       "_origin": "ast",
       "community": 72,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_shap_init"
     },
     {
@@ -770,7 +770,7 @@
       "_origin": "ast",
       "community": 73,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_tree_reader_init"
     },
     {
@@ -781,7 +781,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "decision_path_extractor.py",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor"
     },
     {
@@ -792,7 +792,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "decisionpathextractor",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor_decisionpathextractor"
     },
     {
@@ -803,7 +803,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": ".__init__()",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor_decisionpathextractor_init"
     },
     {
@@ -814,7 +814,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": ".extract_path()",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor_decisionpathextractor_extract_path"
     },
     {
@@ -825,7 +825,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "decision_path_extractor.py  extracts the exact path followed by a record insi",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor_rationale_1"
     },
     {
@@ -836,7 +836,7 @@
       "_origin": "ast",
       "community": 15,
       "norm_label": "extract decision path         for a single observation.",
-      "community_name": "decision_path_extractor.py",
+      "community_name": "test_explainer_selector.py",
       "id": "tools_tree_reader_decision_path_extractor_rationale_26"
     },
     {
@@ -957,7 +957,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "feature_importance_extractor.py",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor"
     },
     {
@@ -968,7 +968,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "featureimportanceextractor",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_featureimportanceextractor"
     },
     {
@@ -979,7 +979,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".__init__()",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_init"
     },
     {
@@ -990,7 +990,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".get_feature_importance()",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_feature_importance"
     },
     {
@@ -1001,7 +1001,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".get_top_features()",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_featureimportanceextractor_get_top_features"
     },
     {
@@ -1012,7 +1012,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "feature_importance_extractor.py  extract feature importance from decision tre",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_rationale_1"
     },
     {
@@ -1023,7 +1023,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return feature importance dataframe.",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_rationale_25"
     },
     {
@@ -1034,7 +1034,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return top n important features.",
-      "community_name": "test_explainer_selector.py",
+      "community_name": "feature_importance_extractor.py",
       "id": "tools_tree_reader_feature_importance_extractor_rationale_52"
     },
     {
@@ -1210,7 +1210,7 @@
       "_origin": "ast",
       "community": 74,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "tools_visualization_init"
     },
     {
@@ -1221,7 +1221,7 @@
       "_origin": "ast",
       "community": 29,
       "norm_label": "feature_importance_visualizer.py",
-      "community_name": "feature_importance_visualizer.py",
+      "community_name": "Feature Importance Visualization",
       "id": "tools_visualization_feature_importance_visualizer"
     },
     {
@@ -1232,7 +1232,7 @@
       "_origin": "ast",
       "community": 29,
       "norm_label": "featureimportancevisualizer",
-      "community_name": "feature_importance_visualizer.py",
+      "community_name": "Feature Importance Visualization",
       "id": "tools_visualization_feature_importance_visualizer_featureimportancevisualizer"
     },
     {
@@ -1243,7 +1243,7 @@
       "_origin": "ast",
       "community": 29,
       "norm_label": ".plot()",
-      "community_name": "feature_importance_visualizer.py",
+      "community_name": "Feature Importance Visualization",
       "id": "tools_visualization_feature_importance_visualizer_featureimportancevisualizer_plot"
     },
     {
@@ -1254,7 +1254,7 @@
       "_origin": "ast",
       "community": 29,
       "norm_label": "feature_importance_visualizer.py",
-      "community_name": "feature_importance_visualizer.py",
+      "community_name": "Feature Importance Visualization",
       "id": "tools_visualization_feature_importance_visualizer_rationale_1"
     },
     {
@@ -1265,7 +1265,7 @@
       "_origin": "ast",
       "community": 75,
       "norm_label": "__init__.py",
-      "community_name": "__init__.py",
+      "community_name": "Package Init",
       "id": "utils_init"
     },
     {
@@ -1276,7 +1276,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "config_loader.py",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader"
     },
     {
@@ -1287,7 +1287,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "configloader",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_configloader"
     },
     {
@@ -1298,7 +1298,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": ".__init__()",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_configloader_init"
     },
     {
@@ -1309,7 +1309,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "._load_config()",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_configloader_load_config"
     },
     {
@@ -1320,7 +1320,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": ".get()",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_configloader_get"
     },
     {
@@ -1331,7 +1331,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": ".as_dict()",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_configloader_as_dict"
     },
     {
@@ -1342,7 +1342,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "config_loader.py  utility functions for loading project configuration files.",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_rationale_1"
     },
     {
@@ -1353,7 +1353,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "loads configuration from yaml files.",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_rationale_12"
     },
     {
@@ -1364,7 +1364,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "read yaml configuration file.",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_rationale_27"
     },
     {
@@ -1375,7 +1375,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "retrieve nested configuration values.          example:         config.get(\"m",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_rationale_34"
     },
     {
@@ -1386,7 +1386,7 @@
       "_origin": "ast",
       "community": 17,
       "norm_label": "return complete configuration.",
-      "community_name": "ConfigLoader",
+      "community_name": "config_loader.py",
       "id": "utils_config_loader_rationale_51"
     },
     {
@@ -1414,7 +1414,7 @@
       "contributor": null,
       "community": 27,
       "norm_label": "modelloader",
-      "community_name": "Planner Agent",
+      "community_name": "Model and Planner Tools",
       "id": "agents_modelloader"
     },
     {
@@ -1428,7 +1428,7 @@
       "contributor": null,
       "community": 30,
       "norm_label": "decisiontreereader",
-      "community_name": "DecisionTreeReader",
+      "community_name": "Decision Tree Reader Tool",
       "id": "agents_decisiontreereader"
     },
     {
@@ -1442,7 +1442,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "decisionpathextractor",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "agents_decisionpathextractor"
     },
     {
@@ -1456,7 +1456,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "featureimportanceextractor",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "agents_featureimportanceextractor"
     },
     {
@@ -1554,7 +1554,7 @@
       "contributor": null,
       "community": 27,
       "norm_label": "planner agent",
-      "community_name": "Planner Agent",
+      "community_name": "Model and Planner Tools",
       "id": "agents_planneragent"
     },
     {
@@ -1568,7 +1568,7 @@
       "contributor": null,
       "community": 27,
       "norm_label": "model loader tool",
-      "community_name": "Planner Agent",
+      "community_name": "Model and Planner Tools",
       "id": "tools_modelloadertool"
     },
     {
@@ -1582,7 +1582,7 @@
       "contributor": null,
       "community": 27,
       "norm_label": "prediction tool",
-      "community_name": "Planner Agent",
+      "community_name": "Model and Planner Tools",
       "id": "tools_predictiontool"
     },
     {
@@ -1596,7 +1596,7 @@
       "contributor": null,
       "community": 27,
       "norm_label": "metrics tool",
-      "community_name": "Planner Agent",
+      "community_name": "Model and Planner Tools",
       "id": "tools_metricstool"
     },
     {
@@ -1610,7 +1610,7 @@
       "contributor": null,
       "community": 30,
       "norm_label": "tree reader tool",
-      "community_name": "DecisionTreeReader",
+      "community_name": "Decision Tree Reader Tool",
       "id": "tools_treereadertool"
     },
     {
@@ -1624,7 +1624,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shap tool",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "tools_shaptool"
     },
     {
@@ -1638,7 +1638,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "visualization tool",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "tools_visualizationtool"
     },
     {
@@ -1652,7 +1652,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "explainability engine",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "agents_explainabilityengine"
     },
     {
@@ -1666,7 +1666,7 @@
       "contributor": null,
       "community": 26,
       "norm_label": "report generator",
-      "community_name": "Explainability Engine",
+      "community_name": "Explainability Engine Components",
       "id": "agents_reportgenerator"
     },
     {
@@ -2538,7 +2538,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "ingestion_node.py",
-      "community_name": "ModelArtifactLoader",
+      "community_name": "test_ingestion_node.py",
       "id": "agents_ingestion_node"
     },
     {
@@ -2560,7 +2560,7 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "ingestion_node.py  langgraph entry node that builds the unified projectknowled",
-      "community_name": "ModelArtifactLoader",
+      "community_name": "test_ingestion_node.py",
       "id": "agents_ingestion_node_rationale_1"
     },
     {
@@ -2769,7 +2769,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "generic.py",
-      "community_name": "sklearn_tree.py",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_generic"
     },
     {
@@ -2802,7 +2802,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "generic.py  generic fallback model adapter.  used when no specialized framew",
-      "community_name": "sklearn_tree.py",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_generic_rationale_1"
     },
     {
@@ -2835,7 +2835,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "sklearn_tree.py",
-      "community_name": "sklearn_tree.py",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree"
     },
     {
@@ -2868,7 +2868,7 @@
       "_origin": "ast",
       "community": 28,
       "norm_label": ".extract()",
-      "community_name": ".extract",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree_sklearntreeadapter_extract"
     },
     {
@@ -2879,7 +2879,7 @@
       "_origin": "ast",
       "community": 28,
       "norm_label": "._tree_details()",
-      "community_name": ".extract",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree_sklearntreeadapter_tree_details"
     },
     {
@@ -2890,7 +2890,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "sklearn_tree.py  adapter for scikit-learn decision tree and forest models.",
-      "community_name": "sklearn_tree.py",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree_rationale_1"
     },
     {
@@ -2923,7 +2923,7 @@
       "_origin": "ast",
       "community": 28,
       "norm_label": "extract normalized metadata plus tree-specific structure.",
-      "community_name": ".extract",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree_rationale_46"
     },
     {
@@ -2934,7 +2934,7 @@
       "_origin": "ast",
       "community": 28,
       "norm_label": "extract structural details for a single tree or a forest.",
-      "community_name": ".extract",
+      "community_name": "test_model_adapters.py",
       "id": "ingestion_adapters_sklearn_tree_rationale_56"
     },
     {
@@ -3583,7 +3583,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_intent_classifier.py",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier"
     },
     {
@@ -3594,7 +3594,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "_intents()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_intents"
     },
     {
@@ -3605,7 +3605,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "_classifier()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_classifier"
     },
     {
@@ -3616,7 +3616,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_classifies_prediction()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_classifies_prediction"
     },
     {
@@ -3627,7 +3627,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_classifies_decision_path()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_classifies_decision_path"
     },
     {
@@ -3638,7 +3638,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_classifies_feature_importance()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_classifies_feature_importance"
     },
     {
@@ -3649,7 +3649,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_unknown_question_falls_back_to_default()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_unknown_question_falls_back_to_default"
     },
     {
@@ -3660,7 +3660,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_empty_question_falls_back_to_default()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_empty_question_falls_back_to_default"
     },
     {
@@ -3671,7 +3671,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "test_first_matching_intent_wins()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tests_tools_test_intent_classifier_test_first_matching_intent_wins"
     },
     {
@@ -3682,7 +3682,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "__init__.py",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_init"
     },
     {
@@ -3693,7 +3693,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "routing  intent routing tools for the explainability agent.  provides config",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_init_rationale_1"
     },
     {
@@ -3704,7 +3704,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "intent_classifier.py",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier"
     },
     {
@@ -3715,7 +3715,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "intentclassifier",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_intentclassifier"
     },
     {
@@ -3726,7 +3726,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".__init__()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_intentclassifier_init"
     },
     {
@@ -3737,7 +3737,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".classify()",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_intentclassifier_classify"
     },
     {
@@ -3748,7 +3748,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "intent_classifier.py  configuration-driven intent classification.  maps a na",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_rationale_1"
     },
     {
@@ -3759,7 +3759,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "classify a question into a normalized intent from a keyword map.      intents",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_rationale_13"
     },
     {
@@ -3770,7 +3770,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "args:             intents: mapping of intent name to an iterable of keyword",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_rationale_22"
     },
     {
@@ -3781,7 +3781,7 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "return the normalized intent for a question.          args:             quest",
-      "community_name": "test_intent_classifier.py",
+      "community_name": "Intent Classification for Routing",
       "id": "tools_routing_intent_classifier_rationale_32"
     },
     {
@@ -4482,7 +4482,7 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "explanation_node()",
-      "community_name": "explainability_graph.py",
+      "community_name": "test_explanation_provider.py",
       "id": "agents_nodes_explanation_node"
     },
     {
@@ -5080,8 +5080,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "__init__.py",
-      "id": "ingestion_adapters_init",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_init"
     },
     {
       "label": "adapters  Model framework adapter (plugin) architecture.  Each adapter knows",
@@ -5091,8 +5090,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "adapters  model framework adapter (plugin) architecture.  each adapter knows",
-      "id": "ingestion_adapters_init_rationale_1",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_init_rationale_1"
     },
     {
       "label": "base.py",
@@ -5102,8 +5100,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "base.py",
-      "id": "ingestion_adapters_base",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_base"
     },
     {
       "label": "ModelAdapter",
@@ -5113,8 +5110,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "modeladapter",
-      "id": "ingestion_adapters_base_modeladapter",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter"
     },
     {
       "label": ".matches()",
@@ -5124,8 +5120,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": ".matches()",
-      "id": "ingestion_adapters_base_modeladapter_matches",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_matches"
     },
     {
       "label": ".extract()",
@@ -5135,8 +5130,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": ".extract()",
-      "id": "ingestion_adapters_base_modeladapter_extract",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_extract"
     },
     {
       "label": "._infer_task_type()",
@@ -5146,8 +5140,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "._infer_task_type()",
-      "id": "ingestion_adapters_base_modeladapter_infer_task_type",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_infer_task_type"
     },
     {
       "label": "._extract_hyperparameters()",
@@ -5157,8 +5150,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "._extract_hyperparameters()",
-      "id": "ingestion_adapters_base_modeladapter_extract_hyperparameters",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_extract_hyperparameters"
     },
     {
       "label": "._extract_feature_names()",
@@ -5168,8 +5160,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "._extract_feature_names()",
-      "id": "ingestion_adapters_base_modeladapter_extract_feature_names",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_extract_feature_names"
     },
     {
       "label": "._extract_classes()",
@@ -5179,8 +5170,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "._extract_classes()",
-      "id": "ingestion_adapters_base_modeladapter_extract_classes",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_extract_classes"
     },
     {
       "label": "._extract_n_features()",
@@ -5190,8 +5180,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "._extract_n_features()",
-      "id": "ingestion_adapters_base_modeladapter_extract_n_features",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_modeladapter_extract_n_features"
     },
     {
       "label": "base.py  Base model adapter interface.  Defines the :class:`ModelAdapter` co",
@@ -5201,8 +5190,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "base.py  base model adapter interface.  defines the :class:`modeladapter` co",
-      "id": "ingestion_adapters_base_rationale_1",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_base_rationale_1"
     },
     {
       "label": "Base class for framework-specific model adapters.      Subclasses declare the",
@@ -5212,8 +5200,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "base class for framework-specific model adapters.      subclasses declare the",
-      "id": "ingestion_adapters_base_rationale_19",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_19"
     },
     {
       "label": "Return whether this adapter can handle the given estimator.          Args:",
@@ -5223,8 +5210,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "return whether this adapter can handle the given estimator.          args:",
-      "id": "ingestion_adapters_base_rationale_31",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_31"
     },
     {
       "label": "Extract normalized metadata for the given model.          Args:             m",
@@ -5234,8 +5220,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "extract normalized metadata for the given model.          args:             m",
-      "id": "ingestion_adapters_base_rationale_44",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_44"
     },
     {
       "label": "Infer whether the estimator is a classifier or regressor.          Returns:",
@@ -5245,8 +5230,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "infer whether the estimator is a classifier or regressor.          returns:",
-      "id": "ingestion_adapters_base_rationale_68",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_68"
     },
     {
       "label": "Extract estimator hyperparameters when available.",
@@ -5256,8 +5240,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "extract estimator hyperparameters when available.",
-      "id": "ingestion_adapters_base_rationale_91",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_91"
     },
     {
       "label": "Extract feature names from the fitted model when available.",
@@ -5267,8 +5250,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "extract feature names from the fitted model when available.",
-      "id": "ingestion_adapters_base_rationale_102",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_102"
     },
     {
       "label": "Extract class labels for classifiers when available.",
@@ -5278,8 +5260,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "extract class labels for classifiers when available.",
-      "id": "ingestion_adapters_base_rationale_116",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_116"
     },
     {
       "label": "Extract the number of input features when available.",
@@ -5289,8 +5270,7 @@
       "_origin": "ast",
       "community": 14,
       "norm_label": "extract the number of input features when available.",
-      "id": "ingestion_adapters_base_rationale_130",
-      "community_name": "ModelAdapter"
+      "id": "ingestion_adapters_base_rationale_130"
     },
     {
       "label": "registry.py",
@@ -5300,8 +5280,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "registry.py",
-      "id": "ingestion_adapters_registry",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_registry"
     },
     {
       "label": "AdapterRegistry",
@@ -5311,8 +5290,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": "adapterregistry",
-      "id": "ingestion_adapters_registry_adapterregistry",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_adapterregistry"
     },
     {
       "label": ".__init__()",
@@ -5322,8 +5300,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": ".__init__()",
-      "id": "ingestion_adapters_registry_adapterregistry_init",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_adapterregistry_init"
     },
     {
       "label": ".register()",
@@ -5333,8 +5310,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": ".register()",
-      "id": "ingestion_adapters_registry_adapterregistry_register",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_adapterregistry_register"
     },
     {
       "label": ".resolve()",
@@ -5344,8 +5320,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": ".resolve()",
-      "id": "ingestion_adapters_registry_adapterregistry_resolve",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_adapterregistry_resolve"
     },
     {
       "label": "default_registry()",
@@ -5355,8 +5330,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "default_registry()",
-      "id": "ingestion_adapters_registry_default_registry",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_registry_default_registry"
     },
     {
       "label": "registry.py  Adapter registry.  Resolves the correct :class:`ModelAdapter` f",
@@ -5366,8 +5340,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "registry.py  adapter registry.  resolves the correct :class:`modeladapter` f",
-      "id": "ingestion_adapters_registry_rationale_1",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_registry_rationale_1"
     },
     {
       "label": "Resolve a model adapter from a loaded estimator.      Specialized adapters are",
@@ -5377,8 +5350,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": "resolve a model adapter from a loaded estimator.      specialized adapters are",
-      "id": "ingestion_adapters_registry_rationale_20",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_rationale_20"
     },
     {
       "label": "Args:             adapters: Optional iterable of adapter classes to use instead",
@@ -5388,8 +5360,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": "args:             adapters: optional iterable of adapter classes to use instead",
-      "id": "ingestion_adapters_registry_rationale_31",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_rationale_31"
     },
     {
       "label": "Register a specialized adapter with priority over existing ones.          Args",
@@ -5399,8 +5370,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": "register a specialized adapter with priority over existing ones.          args",
-      "id": "ingestion_adapters_registry_rationale_42",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_rationale_42"
     },
     {
       "label": "Return an adapter instance for the given estimator.          Args:",
@@ -5410,8 +5380,7 @@
       "_origin": "ast",
       "community": 24,
       "norm_label": "return an adapter instance for the given estimator.          args:",
-      "id": "ingestion_adapters_registry_rationale_51",
-      "community_name": "AdapterRegistry"
+      "id": "ingestion_adapters_registry_rationale_51"
     },
     {
       "label": "Return a fresh registry configured with the built-in adapters.",
@@ -5421,8 +5390,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "return a fresh registry configured with the built-in adapters.",
-      "id": "ingestion_adapters_registry_rationale_69",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_registry_rationale_69"
     },
     {
       "label": "xgboost_adapter.py",
@@ -5432,8 +5400,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "xgboost_adapter.py",
-      "id": "ingestion_adapters_xgboost_adapter",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_xgboost_adapter"
     },
     {
       "label": "XGBoostAdapter",
@@ -5443,8 +5410,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "xgboostadapter",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter"
     },
     {
       "label": ".matches()",
@@ -5454,8 +5420,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": ".matches()",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_matches",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_matches"
     },
     {
       "label": ".extract()",
@@ -5465,8 +5430,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": ".extract()",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_extract",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_extract"
     },
     {
       "label": "._booster_details()",
@@ -5476,8 +5440,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "._booster_details()",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_booster_details",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_booster_details"
     },
     {
       "label": "._resolve_booster()",
@@ -5487,8 +5450,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "._resolve_booster()",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_resolve_booster",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_resolve_booster"
     },
     {
       "label": "._native_feature_names()",
@@ -5498,8 +5460,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "._native_feature_names()",
-      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_native_feature_names",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_xgboostadapter_native_feature_names"
     },
     {
       "label": "xgboost_adapter.py  Adapter for XGBoost gradient-boosted models.  Handles bo",
@@ -5509,8 +5470,7 @@
       "_origin": "ast",
       "community": 19,
       "norm_label": "xgboost_adapter.py  adapter for xgboost gradient-boosted models.  handles bo",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_1",
-      "community_name": "sklearn_tree.py"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_1"
     },
     {
       "label": "Adapter for XGBoost estimators.      Matches any object whose class is defined",
@@ -5520,8 +5480,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "adapter for xgboost estimators.      matches any object whose class is defined",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_20",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_20"
     },
     {
       "label": "Return whether the estimator comes from the xgboost package.",
@@ -5531,8 +5490,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "return whether the estimator comes from the xgboost package.",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_31",
-      "community_name": "XGBoostAdapter"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_31"
     },
     {
       "label": "Extract normalized metadata plus booster-specific structure.",
@@ -5542,8 +5500,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "extract normalized metadata plus booster-specific structure.",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_39",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_39"
     },
     {
       "label": "Extract ensemble details (tree count) for the model.",
@@ -5553,8 +5510,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "extract ensemble details (tree count) for the model.",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_55",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_55"
     },
     {
       "label": "Return the underlying booster for sklearn-API or native models.",
@@ -5564,8 +5520,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "return the underlying booster for sklearn-api or native models.",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_77",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_77"
     },
     {
       "label": "Extract feature names carried on a native booster.",
@@ -5575,8 +5530,7 @@
       "_origin": "ast",
       "community": 25,
       "norm_label": "extract feature names carried on a native booster.",
-      "id": "ingestion_adapters_xgboost_adapter_rationale_91",
-      "community_name": "._booster_details"
+      "id": "ingestion_adapters_xgboost_adapter_rationale_91"
     },
     {
       "label": "test_xgboost_adapter.py",
@@ -5586,8 +5540,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_xgboost_adapter.py",
-      "id": "tests_ingestion_test_xgboost_adapter",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter"
     },
     {
       "label": "_fitted_classifier()",
@@ -5597,8 +5550,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "_fitted_classifier()",
-      "id": "tests_ingestion_test_xgboost_adapter_fitted_classifier",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_fitted_classifier"
     },
     {
       "label": "_fitted_native_booster()",
@@ -5608,8 +5560,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "_fitted_native_booster()",
-      "id": "tests_ingestion_test_xgboost_adapter_fitted_native_booster",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_fitted_native_booster"
     },
     {
       "label": "test_registry_resolves_xgboost_sklearn_api()",
@@ -5619,8 +5570,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_registry_resolves_xgboost_sklearn_api()",
-      "id": "tests_ingestion_test_xgboost_adapter_test_registry_resolves_xgboost_sklearn_api",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_test_registry_resolves_xgboost_sklearn_api"
     },
     {
       "label": "test_registry_resolves_native_booster()",
@@ -5630,8 +5580,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_registry_resolves_native_booster()",
-      "id": "tests_ingestion_test_xgboost_adapter_test_registry_resolves_native_booster",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_test_registry_resolves_native_booster"
     },
     {
       "label": "test_xgboost_adapter_normalizes_metadata()",
@@ -5641,8 +5590,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_xgboost_adapter_normalizes_metadata()",
-      "id": "tests_ingestion_test_xgboost_adapter_test_xgboost_adapter_normalizes_metadata",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_test_xgboost_adapter_normalizes_metadata"
     },
     {
       "label": "test_xgboost_adapter_reads_native_feature_names()",
@@ -5652,8 +5600,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_xgboost_adapter_reads_native_feature_names()",
-      "id": "tests_ingestion_test_xgboost_adapter_test_xgboost_adapter_reads_native_feature_names",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_test_xgboost_adapter_reads_native_feature_names"
     },
     {
       "label": "test_non_xgboost_model_does_not_match()",
@@ -5663,8 +5610,7 @@
       "_origin": "ast",
       "community": 16,
       "norm_label": "test_non_xgboost_model_does_not_match()",
-      "id": "tests_ingestion_test_xgboost_adapter_test_non_xgboost_model_does_not_match",
-      "community_name": "XGBoostAdapter"
+      "id": "tests_ingestion_test_xgboost_adapter_test_non_xgboost_model_does_not_match"
     },
     {
       "label": "test_xgboost_explainer.py",
@@ -5674,8 +5620,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_xgboost_explainer.py",
-      "id": "tests_tools_test_xgboost_explainer",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer"
     },
     {
       "label": "_fitted_classifier()",
@@ -5685,8 +5630,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "_fitted_classifier()",
-      "id": "tests_tools_test_xgboost_explainer_fitted_classifier",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_fitted_classifier"
     },
     {
       "label": "_fitted_native_booster()",
@@ -5696,8 +5640,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "_fitted_native_booster()",
-      "id": "tests_tools_test_xgboost_explainer_fitted_native_booster",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_fitted_native_booster"
     },
     {
       "label": "test_is_xgboost_from_metadata()",
@@ -5707,8 +5650,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_is_xgboost_from_metadata()",
-      "id": "tests_tools_test_xgboost_explainer_test_is_xgboost_from_metadata",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_is_xgboost_from_metadata"
     },
     {
       "label": "test_is_xgboost_from_module()",
@@ -5718,8 +5660,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_is_xgboost_from_module()",
-      "id": "tests_tools_test_xgboost_explainer_test_is_xgboost_from_module",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_is_xgboost_from_module"
     },
     {
       "label": "test_selector_returns_xgboost_explainer()",
@@ -5729,8 +5670,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_selector_returns_xgboost_explainer()",
-      "id": "tests_tools_test_xgboost_explainer_test_selector_returns_xgboost_explainer",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_selector_returns_xgboost_explainer"
     },
     {
       "label": "test_selector_returns_sklearn_explainer_for_tree()",
@@ -5740,8 +5680,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_selector_returns_sklearn_explainer_for_tree()",
-      "id": "tests_tools_test_xgboost_explainer_test_selector_returns_sklearn_explainer_for_tree",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_selector_returns_sklearn_explainer_for_tree"
     },
     {
       "label": "test_xgboost_importance_sklearn_api()",
@@ -5751,8 +5690,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_xgboost_importance_sklearn_api()",
-      "id": "tests_tools_test_xgboost_explainer_test_xgboost_importance_sklearn_api",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_xgboost_importance_sklearn_api"
     },
     {
       "label": "test_xgboost_importance_native_booster()",
@@ -5762,8 +5700,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "test_xgboost_importance_native_booster()",
-      "id": "tests_tools_test_xgboost_explainer_test_xgboost_importance_native_booster",
-      "community_name": "test_explainer_selector.py"
+      "id": "tests_tools_test_xgboost_explainer_test_xgboost_importance_native_booster"
     },
     {
       "label": "explainer_selector.py",
@@ -5773,8 +5710,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "explainer_selector.py",
-      "id": "tools_explainers_explainer_selector",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector"
     },
     {
       "label": "is_ensemble()",
@@ -5784,8 +5720,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "is_ensemble()",
-      "id": "tools_explainers_explainer_selector_is_ensemble",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_is_ensemble"
     },
     {
       "label": "is_xgboost()",
@@ -5795,8 +5730,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "is_xgboost()",
-      "id": "tools_explainers_explainer_selector_is_xgboost",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_is_xgboost"
     },
     {
       "label": "select_decision_path_explainer()",
@@ -5806,8 +5740,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "select_decision_path_explainer()",
-      "id": "tools_explainers_explainer_selector_select_decision_path_explainer",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_select_decision_path_explainer"
     },
     {
       "label": "select_feature_importance_explainer()",
@@ -5817,8 +5750,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "select_feature_importance_explainer()",
-      "id": "tools_explainers_explainer_selector_select_feature_importance_explainer",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_select_feature_importance_explainer"
     },
     {
       "label": "explainer_selector.py  Adapter-aware selection of explainability tools.  Cho",
@@ -5828,8 +5760,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "explainer_selector.py  adapter-aware selection of explainability tools.  cho",
-      "id": "tools_explainers_explainer_selector_rationale_1",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_rationale_1"
     },
     {
       "label": "Return whether the model is a tree ensemble.      Prefers the normalized ``tre",
@@ -5839,8 +5770,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return whether the model is a tree ensemble.      prefers the normalized ``tre",
-      "id": "tools_explainers_explainer_selector_rationale_27",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_rationale_27"
     },
     {
       "label": "Return whether the model is an XGBoost estimator.      Prefers the normalized",
@@ -5850,8 +5780,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return whether the model is an xgboost estimator.      prefers the normalized",
-      "id": "tools_explainers_explainer_selector_rationale_42",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_rationale_42"
     },
     {
       "label": "Return the decision-path explainer matching the model.      A tree ensemble yi",
@@ -5861,8 +5790,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return the decision-path explainer matching the model.      a tree ensemble yi",
-      "id": "tools_explainers_explainer_selector_rationale_62",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_rationale_62"
     },
     {
       "label": "Return the feature-importance explainer for the model.      XGBoost models res",
@@ -5872,8 +5800,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return the feature-importance explainer for the model.      xgboost models res",
-      "id": "tools_explainers_explainer_selector_rationale_79",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_explainer_selector_rationale_79"
     },
     {
       "label": "xgboost_feature_importance.py",
@@ -5883,8 +5810,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "xgboost_feature_importance.py",
-      "id": "tools_explainers_xgboost_feature_importance",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance"
     },
     {
       "label": "XGBoostFeatureImportanceExtractor",
@@ -5894,8 +5820,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "xgboostfeatureimportanceextractor",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor"
     },
     {
       "label": ".__init__()",
@@ -5905,8 +5830,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".__init__()",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_init",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_init"
     },
     {
       "label": "._booster()",
@@ -5916,8 +5840,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "._booster()",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_booster",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_booster"
     },
     {
       "label": "._scores()",
@@ -5927,8 +5850,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "._scores()",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_scores",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_scores"
     },
     {
       "label": ".get_feature_importance()",
@@ -5938,8 +5860,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".get_feature_importance()",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_get_feature_importance",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_get_feature_importance"
     },
     {
       "label": ".get_top_features()",
@@ -5949,8 +5870,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".get_top_features()",
-      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_get_top_features",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_xgboostfeatureimportanceextractor_get_top_features"
     },
     {
       "label": "xgboost_feature_importance.py  Feature-importance explainer for XGBoost models",
@@ -5960,8 +5880,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "xgboost_feature_importance.py  feature-importance explainer for xgboost models",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_1",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_1"
     },
     {
       "label": "Extract gain/weight based feature importance from XGBoost models.      Args:",
@@ -5971,8 +5890,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "extract gain/weight based feature importance from xgboost models.      args:",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_16",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_16"
     },
     {
       "label": "Return the underlying booster for sklearn-API or native models.",
@@ -5982,8 +5900,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return the underlying booster for sklearn-api or native models.",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_33",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_33"
     },
     {
       "label": "Return the raw booster importance scores keyed by feature.",
@@ -5993,8 +5910,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return the raw booster importance scores keyed by feature.",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_44",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_44"
     },
     {
       "label": "Return a feature-importance dataframe.          Features that never appear in",
@@ -6004,8 +5920,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return a feature-importance dataframe.          features that never appear in",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_59",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_59"
     },
     {
       "label": "Return the top ``top_n`` most important features.",
@@ -6015,8 +5930,7 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "return the top ``top_n`` most important features.",
-      "id": "tools_explainers_xgboost_feature_importance_rationale_93",
-      "community_name": "test_explainer_selector.py"
+      "id": "tools_explainers_xgboost_feature_importance_rationale_93"
     },
     {
       "label": "explanation_provider.py",
@@ -6026,8 +5940,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "explanation_provider.py",
-      "id": "agents_explanation_provider",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider"
     },
     {
       "label": "_repair_ca_bundle_env()",
@@ -6037,8 +5950,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "_repair_ca_bundle_env()",
-      "id": "agents_explanation_provider_repair_ca_bundle_env",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_repair_ca_bundle_env"
     },
     {
       "label": "ExplanationProvider",
@@ -6048,8 +5960,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "explanationprovider",
-      "id": "agents_explanation_provider_explanationprovider",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_explanationprovider"
     },
     {
       "label": ".generate()",
@@ -6059,8 +5970,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".generate()",
-      "id": "agents_explanation_provider_explanationprovider_generate",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_explanationprovider_generate"
     },
     {
       "label": "EchoExplanationProvider",
@@ -6070,8 +5980,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "echoexplanationprovider",
-      "id": "agents_explanation_provider_echoexplanationprovider",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_echoexplanationprovider"
     },
     {
       "label": ".__init__()",
@@ -6081,8 +5990,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".__init__()",
-      "id": "agents_explanation_provider_echoexplanationprovider_init",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_echoexplanationprovider_init"
     },
     {
       "label": ".generate()",
@@ -6092,8 +6000,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".generate()",
-      "id": "agents_explanation_provider_echoexplanationprovider_generate",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_echoexplanationprovider_generate"
     },
     {
       "label": "OpenAIExplanationProvider",
@@ -6103,8 +6010,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "openaiexplanationprovider",
-      "id": "agents_explanation_provider_openaiexplanationprovider",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_openaiexplanationprovider"
     },
     {
       "label": ".__init__()",
@@ -6114,8 +6020,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".__init__()",
-      "id": "agents_explanation_provider_openaiexplanationprovider_init",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_openaiexplanationprovider_init"
     },
     {
       "label": ".generate()",
@@ -6125,8 +6030,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".generate()",
-      "id": "agents_explanation_provider_openaiexplanationprovider_generate",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_openaiexplanationprovider_generate"
     },
     {
       "label": "build_provider()",
@@ -6136,8 +6040,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "build_provider()",
-      "id": "agents_explanation_provider_build_provider",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_build_provider"
     },
     {
       "label": "explanation_provider.py  Config-driven explanation providers.  Decouples the",
@@ -6147,8 +6050,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "explanation_provider.py  config-driven explanation providers.  decouples the",
-      "id": "agents_explanation_provider_rationale_1",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_1"
     },
     {
       "label": "Point stale CA-bundle environment variables at a valid bundle.      Tools such",
@@ -6158,8 +6060,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "point stale ca-bundle environment variables at a valid bundle.      tools such",
-      "id": "agents_explanation_provider_rationale_22",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_22"
     },
     {
       "label": "Base interface for explanation text generation.",
@@ -6169,8 +6070,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "base interface for explanation text generation.",
-      "id": "agents_explanation_provider_rationale_46",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_46"
     },
     {
       "label": "Return explanation text for the given prompt.          Args:             prom",
@@ -6180,8 +6080,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "return explanation text for the given prompt.          args:             prom",
-      "id": "agents_explanation_provider_rationale_49",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_49"
     },
     {
       "label": "Deterministic provider that echoes the prompt.      Used as the default and fo",
@@ -6191,8 +6090,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "deterministic provider that echoes the prompt.      used as the default and fo",
-      "id": "agents_explanation_provider_rationale_62",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_62"
     },
     {
       "label": "OpenAI-backed provider.      The OpenAI client is imported and constructed laz",
@@ -6202,8 +6100,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "openai-backed provider.      the openai client is imported and constructed laz",
-      "id": "agents_explanation_provider_rationale_77",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_77"
     },
     {
       "label": "Build an explanation provider from configuration.      Reads ``explanation.pro",
@@ -6213,8 +6110,7 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "build an explanation provider from configuration.      reads ``explanation.pro",
-      "id": "agents_explanation_provider_rationale_109",
-      "community_name": "test_explanation_provider.py"
+      "id": "agents_explanation_provider_rationale_109"
     },
     {
       "label": "app.py",
@@ -6224,8 +6120,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "app.py",
-      "id": "ui_app",
-      "community_name": "app.py"
+      "id": "ui_app"
     },
     {
       "label": "discover()",
@@ -6235,8 +6130,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "discover()",
-      "id": "ui_app_discover",
-      "community_name": "app.py"
+      "id": "ui_app_discover"
     },
     {
       "label": "_dataset_hint()",
@@ -6246,8 +6140,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "_dataset_hint()",
-      "id": "ui_app_dataset_hint",
-      "community_name": "app.py"
+      "id": "ui_app_dataset_hint"
     },
     {
       "label": "artifact_selector()",
@@ -6257,8 +6150,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "artifact_selector()",
-      "id": "ui_app_artifact_selector",
-      "community_name": "app.py"
+      "id": "ui_app_artifact_selector"
     },
     {
       "label": "build_knowledge()",
@@ -6268,8 +6160,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "build_knowledge()",
-      "id": "ui_app_build_knowledge",
-      "community_name": "app.py"
+      "id": "ui_app_build_knowledge"
     },
     {
       "label": "run_with_provider()",
@@ -6279,8 +6170,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "run_with_provider()",
-      "id": "ui_app_run_with_provider",
-      "community_name": "app.py"
+      "id": "ui_app_run_with_provider"
     },
     {
       "label": "feature_help_map()",
@@ -6290,8 +6180,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "feature_help_map()",
-      "id": "ui_app_feature_help_map",
-      "community_name": "app.py"
+      "id": "ui_app_feature_help_map"
     },
     {
       "label": "_range_midpoint()",
@@ -6301,8 +6190,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "_range_midpoint()",
-      "id": "ui_app_range_midpoint",
-      "community_name": "app.py"
+      "id": "ui_app_range_midpoint"
     },
     {
       "label": "default_value_map()",
@@ -6312,8 +6200,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "default_value_map()",
-      "id": "ui_app_default_value_map",
-      "community_name": "app.py"
+      "id": "ui_app_default_value_map"
     },
     {
       "label": "main()",
@@ -6323,8 +6210,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "main()",
-      "id": "ui_app_main",
-      "community_name": "app.py"
+      "id": "ui_app_main"
     },
     {
       "label": "app.py  Streamlit playground for the ML Explainability Agent.  Explore every",
@@ -6334,8 +6220,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "app.py  streamlit playground for the ml explainability agent.  explore every",
-      "id": "ui_app_rationale_1",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_1"
     },
     {
       "label": "Return existing files under the project root matching any glob pattern.      R",
@@ -6345,8 +6230,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "return existing files under the project root matching any glob pattern.      r",
-      "id": "ui_app_rationale_70",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_70"
     },
     {
       "label": "Guess the dataset folder key from a model filename.      e.g. 'adult_income_xg",
@@ -6356,8 +6240,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "guess the dataset folder key from a model filename.      e.g. 'adult_income_xg",
-      "id": "ui_app_rationale_84",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_84"
     },
     {
       "label": "Render a sidebar selector for an artifact and return the chosen path.      Lis",
@@ -6367,8 +6250,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "render a sidebar selector for an artifact and return the chosen path.      lis",
-      "id": "ui_app_rationale_101",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_101"
     },
     {
       "label": "Build the knowledge object from explicit artifact paths (cached).",
@@ -6378,8 +6260,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "build the knowledge object from explicit artifact paths (cached).",
-      "id": "ui_app_rationale_139",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_139"
     },
     {
       "label": "Run the full agent end to end from explicit artifact paths.      Writes a temp",
@@ -6389,8 +6270,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "run the full agent end to end from explicit artifact paths.      writes a temp",
-      "id": "ui_app_rationale_160",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_160"
     },
     {
       "label": "Map feature name -> help string (meaning + allowed range) for inputs.",
@@ -6400,8 +6280,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "map feature name -> help string (meaning + allowed range) for inputs.",
-      "id": "ui_app_rationale_189",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_189"
     },
     {
       "label": "Return the midpoint of an 'Allowed Range' string, or None.      Handles plain",
@@ -6411,8 +6290,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "return the midpoint of an 'allowed range' string, or none.      handles plain",
-      "id": "ui_app_rationale_205",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_205"
     },
     {
       "label": "Map feature name -> a representative default value for sample inputs.      Pre",
@@ -6422,8 +6300,7 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "map feature name -> a representative default value for sample inputs.      pre",
-      "id": "ui_app_rationale_223",
-      "community_name": "app.py"
+      "id": "ui_app_rationale_223"
     },
     {
       "label": "numpy",
@@ -6436,8 +6313,7 @@
       "contributor": null,
       "community": 54,
       "norm_label": "numpy",
-      "id": "requirements_numpy",
-      "community_name": "numpy"
+      "id": "requirements_numpy"
     },
     {
       "label": "pandas",
@@ -6450,8 +6326,7 @@
       "contributor": null,
       "community": 56,
       "norm_label": "pandas",
-      "id": "requirements_pandas",
-      "community_name": "pandas"
+      "id": "requirements_pandas"
     },
     {
       "label": "openpyxl",
@@ -6464,8 +6339,7 @@
       "contributor": null,
       "community": 55,
       "norm_label": "openpyxl",
-      "id": "requirements_openpyxl",
-      "community_name": "openpyxl"
+      "id": "requirements_openpyxl"
     },
     {
       "label": "matplotlib",
@@ -6478,8 +6352,7 @@
       "contributor": null,
       "community": 53,
       "norm_label": "matplotlib",
-      "id": "requirements_matplotlib",
-      "community_name": "matplotlib"
+      "id": "requirements_matplotlib"
     },
     {
       "label": "graphviz",
@@ -6492,8 +6365,7 @@
       "contributor": null,
       "community": 51,
       "norm_label": "graphviz",
-      "id": "requirements_graphviz",
-      "community_name": "graphviz"
+      "id": "requirements_graphviz"
     },
     {
       "label": "scikit-learn",
@@ -6506,8 +6378,7 @@
       "contributor": null,
       "community": 59,
       "norm_label": "scikit-learn",
-      "id": "requirements_scikit_learn",
-      "community_name": "scikit-learn"
+      "id": "requirements_scikit_learn"
     },
     {
       "label": "xgboost",
@@ -6520,8 +6391,7 @@
       "contributor": null,
       "community": 61,
       "norm_label": "xgboost",
-      "id": "requirements_xgboost",
-      "community_name": "xgboost"
+      "id": "requirements_xgboost"
     },
     {
       "label": "jupyter",
@@ -6534,8 +6404,7 @@
       "contributor": null,
       "community": 52,
       "norm_label": "jupyter",
-      "id": "requirements_jupyter",
-      "community_name": "jupyter"
+      "id": "requirements_jupyter"
     },
     {
       "label": "streamlit",
@@ -6548,8 +6417,7 @@
       "contributor": null,
       "community": 60,
       "norm_label": "streamlit",
-      "id": "requirements_streamlit",
-      "community_name": "streamlit"
+      "id": "requirements_streamlit"
     },
     {
       "label": "python-dotenv",
@@ -6562,8 +6430,7 @@
       "contributor": null,
       "community": 58,
       "norm_label": "python-dotenv",
-      "id": "requirements_python_dotenv",
-      "community_name": "python-dotenv"
+      "id": "requirements_python_dotenv"
     },
     {
       "label": "pytest",
@@ -6576,8 +6443,7 @@
       "contributor": null,
       "community": 57,
       "norm_label": "pytest",
-      "id": "requirements_pytest",
-      "community_name": "pytest"
+      "id": "requirements_pytest"
     },
     {
       "label": "Census Income (>50K) Classifier",
@@ -6588,10 +6454,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "census income (>50k) classifier",
       "id": "data_adult_income_project_context_census_income_classifier",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "census income (>50k) classifier"
     },
     {
       "label": "Census Income Target Variable (class)",
@@ -6602,10 +6467,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "census income target variable (class)",
       "id": "data_adult_income_project_context_class_target_variable",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "census income target variable (class)"
     },
     {
       "label": "Census Income Key Drivers",
@@ -6616,10 +6480,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "census income key drivers",
       "id": "data_adult_income_project_context_key_drivers",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "census income key drivers"
     },
     {
       "label": "Breast Tumour Malignancy Classifier",
@@ -6630,10 +6493,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "breast tumour malignancy classifier",
       "id": "data_breast_cancer_project_context_breast_tumour_classifier",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "breast tumour malignancy classifier"
     },
     {
       "label": "Breast Tumour Target Variable (benign vs malignant)",
@@ -6644,10 +6506,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "breast tumour target variable (benign vs malignant)",
       "id": "data_breast_cancer_project_context_tumour_class_target_variable",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "breast tumour target variable (benign vs malignant)"
     },
     {
       "label": "Breast Tumour Key Drivers",
@@ -6658,10 +6519,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "breast tumour key drivers",
       "id": "data_breast_cancer_project_context_key_drivers",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "breast tumour key drivers"
     },
     {
       "label": "California Median House Value Regressor",
@@ -6672,10 +6532,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "california median house value regressor",
       "id": "data_california_housing_project_context_california_house_value_regressor",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "california median house value regressor"
     },
     {
       "label": "California Median House Value Target Variable",
@@ -6686,10 +6545,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "california median house value target variable",
       "id": "data_california_housing_project_context_median_house_value_target_variable",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "california median house value target variable"
     },
     {
       "label": "California Housing Key Drivers",
@@ -6700,10 +6558,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
-      "norm_label": "california housing key drivers",
       "id": "data_california_housing_project_context_key_drivers",
-      "community_name": "Census Income (>50K) Classifier"
+      "community": 23,
+      "norm_label": "california housing key drivers"
     }
   ],
   "links": [

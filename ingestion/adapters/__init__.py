@@ -15,6 +15,8 @@ from ingestion.adapters.base import ModelAdapter
 from ingestion.adapters.generic import GenericModelAdapter
 from ingestion.adapters.sklearn_tree import SklearnTreeAdapter
 from ingestion.adapters.xgboost_adapter import XGBoostAdapter
+from ingestion.adapters.lightgbm_adapter import LightGBMAdapter
+from ingestion.adapters.catboost_adapter import CatBoostAdapter
 from ingestion.adapters.registry import AdapterRegistry, default_registry
 
 __all__ = [
@@ -22,6 +24,8 @@ __all__ = [
     "GenericModelAdapter",
     "SklearnTreeAdapter",
     "XGBoostAdapter",
+    "LightGBMAdapter",
+    "CatBoostAdapter",
     "AdapterRegistry",
     "default_registry",
 ]

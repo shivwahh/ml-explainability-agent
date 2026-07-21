@@ -49,11 +49,26 @@ routing:
       - "influential"
       - "drivers"
 
+    counterfactual:
+      - "what if"
+      - "make prediction"
+      - "flip"
+      - "change"
+      - "counterfactual"
+
     prediction:
       - "what will"
       - "predict"
       - "prediction"
       - "outcome"
+
+    local_explanation:
+      - "shap"
+      - "contribution"
+      - "local contribution"
+      - "feature contribution"
+      - "attribution"
+      - "impact of"
 
 # ==========================================================
 # Explanation Configuration

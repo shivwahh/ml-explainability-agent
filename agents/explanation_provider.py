@@ -99,9 +99,39 @@ class OpenAIExplanationProvider(ExplanationProvider):
         return response.output_text
 
 
+class GeminiExplanationProvider(ExplanationProvider):
+    """
+    Google Gemini-backed provider.
+
+    The Gemini client is constructed lazily inside :meth:`generate`,
+    so importing this module never requires API keys or library availability
+    at import time.
+    """
+
+    def __init__(self, model: str = "gemini-3.6-flash"):
+        self.model = model
+
+    def generate(self, prompt: str) -> str:
+        from google import genai
+
+        api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+        if api_key:
+            client = genai.Client(api_key=api_key)
+        else:
+            client = genai.Client()
+
+        response = client.models.generate_content(
+            model=self.model,
+            contents=prompt,
+        )
+
+        return response.text
+
+
 PROVIDERS = {
     "echo": EchoExplanationProvider,
     "openai": OpenAIExplanationProvider,
+    "gemini": GeminiExplanationProvider,
 }
 
 
@@ -119,7 +149,12 @@ def build_provider(config) -> ExplanationProvider:
         A configured :class:`ExplanationProvider`.
     """
     name = config.get("explanation", "provider", default="echo")
-    model = config.get("explanation", "model", default="gpt-4.1-mini")
+    
+    default_model = "gpt-4.1-mini"
+    if str(name).lower() == "gemini":
+        default_model = "gemini-3.6-flash"
+        
+    model = config.get("explanation", "model", default=default_model)
 
     provider_cls = PROVIDERS.get(str(name).lower(), EchoExplanationProvider)
 

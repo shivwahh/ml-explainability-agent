@@ -11,9 +11,16 @@ trying registered specialized adapters in order and falling back to
 from ingestion.adapters.generic import GenericModelAdapter
 from ingestion.adapters.sklearn_tree import SklearnTreeAdapter
 from ingestion.adapters.xgboost_adapter import XGBoostAdapter
+from ingestion.adapters.lightgbm_adapter import LightGBMAdapter
+from ingestion.adapters.catboost_adapter import CatBoostAdapter
 
 
-DEFAULT_ADAPTERS = (SklearnTreeAdapter, XGBoostAdapter)
+DEFAULT_ADAPTERS = (
+    SklearnTreeAdapter,
+    XGBoostAdapter,
+    LightGBMAdapter,
+    CatBoostAdapter,
+)
 
 
 class AdapterRegistry:
